@@ -3,10 +3,10 @@
 
 Camera::Camera() :
   cam(nullptr) {
-    CameraPtrVector cameras;
+    CameraPtrVector available_cameras;
     VimbaSystem &system = VimbaSystem :: GetInstance ();
     if ( VmbErrorSuccess == system.Startup () ) {
-      if ( VmbErrorSuccess == system.GetCameras( cameras ) ) {
+      if ( VmbErrorSuccess == system.GetCameras( available_cameras ) ) {
           cam = cameras[0];
       }
     }
@@ -17,15 +17,56 @@ Camera::~Camera(){
 }
 
 bool Camera::openCamera(){
-    if ( VmbErrorSuccess == (*iter)->Open( VmbAccessModeFull ) ){
+    if ( VmbErrorSuccess == cam->Open( VmbAccessModeFull ) ){
         return true;
     }
     else return false;
 }
 
 bool Camera::closeCamera(){
-    if ( VmbErrorSuccess == camera.Close () ){
+    if ( VmbErrorSuccess == cam.Close () ){
         return true;
     }
     else return false;
+}
+
+int Camera::getExposureTime(){
+    FeaturePtr feature;
+    int time_us;
+    if ( VmbErrorSuccess == cam ->GetFeatureByName( "ExposureMode", feature )){
+        if ( feature ==  'Timed'){
+            if ( VmbErrorSuccess == cam ->GetFeatureByName( "ExposureTime", feature )){
+                time_us = feature;
+            }
+        }
+    }
+    return time_us;
+}
+
+bool Camera::setExposureTime(int time_us){
+    FeaturePtr feature;
+    if ( VmbErrorSuccess == cam ->GetFeatureByName( "ExposureMode", feature )){
+        if ( feature !=  'Timed'){
+            if(VmbErrorSuccess != feature->SetValue('Timed')) return false;
+        }
+        if ( VmbErrorSuccess == cam ->GetFeatureByName( "ExposureTime", feature )){
+            if(VmbErrorSuccess == feature->SetValue(time_us)) return true;
+            else return false;
+        }
+        else return false;
+    }
+    else return false;
+}
+
+bool Camera::take_picture(){
+    FeaturePtr feature;
+    if ( VmbErrorSuccess == cam ->GetFeatureByName( "AcquisitionMode", feature )){
+        if ( VmbErrorSuccess == feature ->SetValue( "Continuous" ) ){
+            if ( VmbErrorSuccess == cam->GetFeatureByName( "AcquisitionStart",feature ) ){
+                if ( VmbErrorSuccess == feature ->RunCommand () ){
+                    return true;
+                }
+            }
+        }
+    }
 }

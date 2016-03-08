@@ -30,13 +30,43 @@ bool Camera::closeCamera(){
     else return false;
 }
 
-VmbInt64_t getWidth(){
+int Camera::getExposureTime(){
     FeaturePtr feature;
-    VmbInt64_t width;
-    if ( VmbErrorSuccess == (*iter)->GetFeatureByName( "Width", feature )){ // list of features available in Vimba1394TLFeaturesManual.pdf (camera parameters, exposure, saturation, RAW corrections...)
-      if ( VmbErrorSuccess == feature ->GetValue( width ) ) {
-        return width;
-      }
+    int time_us;
+    if ( VmbErrorSuccess == cam ->GetFeatureByName( "ExposureMode", feature )){
+        if ( feature ==  'Timed'){
+            if ( VmbErrorSuccess == cam ->GetFeatureByName( "ExposureTime", feature )){
+                time_us = feature;
+            }
+        }
     }
+    return time_us;
 }
 
+bool Camera::setExposureTime(int time_us){
+    FeaturePtr feature;
+    if ( VmbErrorSuccess == cam ->GetFeatureByName( "ExposureMode", feature )){
+        if ( feature !=  'Timed'){
+            if(VmbErrorSuccess != feature->SetValue('Timed')) return false;
+        }
+        if ( VmbErrorSuccess == cam ->GetFeatureByName( "ExposureTime", feature )){
+            if(VmbErrorSuccess == feature->SetValue(time_us)) return true;
+            else return false;
+        }
+        else return false;
+    }
+    else return false;
+}
+
+bool Camera::take_picture(){
+    FeaturePtr feature;
+    if ( VmbErrorSuccess == cam ->GetFeatureByName( "AcquisitionMode", feature )){
+        if ( VmbErrorSuccess == feature ->SetValue( "Continuous" ) ){
+            if ( VmbErrorSuccess == cam->GetFeatureByName( "AcquisitionStart",feature ) ){
+                if ( VmbErrorSuccess == feature ->RunCommand () ){
+                    return true;
+                }
+            }
+        }
+    }
+}

@@ -9,9 +9,19 @@ class Camera
     public:
         Camera();
         ~Camera();
+
+        // Initialization
         bool openCamera();
         bool closeCamera();
-        VmbInt64_t getWidth();
+
+        // Features
+        int getExposureTime();
+        bool setExposureTime(int time_us);
+
+        // Picture commands
+        bool Camera::take_picture();
+
+
     private:
         CameraPtr cam;
 };
