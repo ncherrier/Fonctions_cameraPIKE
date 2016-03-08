@@ -1,5 +1,6 @@
 # Sauvegardes automatiques
-*.autosave
+*.cpp.autosave
+*.h.autosave
 
 
 # Windows image file caches

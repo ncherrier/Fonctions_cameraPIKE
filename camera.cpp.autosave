@@ -3,7 +3,7 @@
 
 Camera::Camera() :
   cam(nullptr) {
-    CameraPtrVector cameras;
+    CameraPtrVector available_cameras;
     VimbaSystem &system = VimbaSystem :: GetInstance ();
     if ( VmbErrorSuccess == system.Startup () ) {
       if ( VmbErrorSuccess == system.GetCameras( available_cameras ) ) {
@@ -16,7 +16,7 @@ Camera::~Camera(){
     delete cam;
 }
 
-bool Camera::open_camera(){
+bool Camera::openCamera(){
     if ( VmbErrorSuccess == cam->Open( VmbAccessModeFull ) ){
         return true;
     }
@@ -29,3 +29,14 @@ bool Camera::closeCamera(){
     }
     else return false;
 }
+
+VmbInt64_t getWidth(){
+    FeaturePtr feature;
+    VmbInt64_t width;
+    if ( VmbErrorSuccess == (*iter)->GetFeatureByName( "Width", feature )){ // list of features available in Vimba1394TLFeaturesManual.pdf (camera parameters, exposure, saturation, RAW corrections...)
+      if ( VmbErrorSuccess == feature ->GetValue( width ) ) {
+        return width;
+      }
+    }
+}
+
