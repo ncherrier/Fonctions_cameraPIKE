@@ -6,9 +6,14 @@
 
 class Camera
 {
-public:
-    Camera();
-    void
+    public:
+        Camera();
+        ~Camera();
+        bool openCamera();
+        bool closeCamera();
+        VmbInt64_t getWidth();
+    private:
+        CameraPtr cam;
 };
 
 #endif // CAMERA_H

@@ -6,7 +6,7 @@ Camera::Camera() :
     CameraPtrVector cameras;
     VimbaSystem &system = VimbaSystem :: GetInstance ();
     if ( VmbErrorSuccess == system.Startup () ) {
-      if ( VmbErrorSuccess == system.GetCameras( cameras ) ) {
+      if ( VmbErrorSuccess == system.GetCameras( available_cameras ) ) {
           cam = cameras[0];
       }
     }
@@ -16,15 +16,15 @@ Camera::~Camera(){
     delete cam;
 }
 
-bool Camera::openCamera(){
-    if ( VmbErrorSuccess == (*iter)->Open( VmbAccessModeFull ) ){
+bool Camera::open_camera(){
+    if ( VmbErrorSuccess == cam->Open( VmbAccessModeFull ) ){
         return true;
     }
     else return false;
 }
 
 bool Camera::closeCamera(){
-    if ( VmbErrorSuccess == camera.Close () ){
+    if ( VmbErrorSuccess == cam.Close () ){
         return true;
     }
     else return false;
