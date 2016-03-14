@@ -1,7 +1,7 @@
 #include "camera.h";
 
 
-Camera::Camera() :
+/*Camera::Camera() :
   cam(nullptr) {
     CameraPtrVector available_cameras;
     VimbaSystem &system = VimbaSystem :: GetInstance ();
@@ -70,3 +70,4 @@ bool Camera::take_picture(){
         }
     }
 }
+*/

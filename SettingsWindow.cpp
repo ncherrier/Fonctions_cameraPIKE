@@ -1,4 +1,4 @@
-/*#include <QApplication>
+#include <QApplication>
 #include <QPushButton>
 
 using namespace std;
@@ -23,5 +23,3 @@ int main(int argc, char *argv[])
 
 
 
-
-*/

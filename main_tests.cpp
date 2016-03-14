@@ -2,7 +2,7 @@
 
 #include "camera.h"
 
-int main(int argc, char *argv[]) {
+/*int main(int argc, char *argv[]) {
 
   Camera* camera = new Camera();
   camera->openCamera();
@@ -13,3 +13,4 @@ int main(int argc, char *argv[]) {
 
   return 0;
 }
+*/
