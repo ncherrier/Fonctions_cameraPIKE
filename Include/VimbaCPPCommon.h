@@ -46,7 +46,7 @@
 
 #include <vector>
 #include <string>
-#include "VimbaC/Include/VmbCommonTypes.h"
+#include "Include/VmbCommonTypes.h"
 
 namespace AVT {
 namespace VmbAPI {
