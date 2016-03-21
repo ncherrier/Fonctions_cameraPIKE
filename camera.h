@@ -1,4 +1,4 @@
-/*#include "VimbaCPP.h"
+/*#include "VimbaCPP/Include/VimbaCPP.h"*/
 
 #ifndef CAMERA_H
 #define CAMERA_H
@@ -19,13 +19,12 @@ class Camera
         bool setExposureTime(int time_us);
 
         // Picture commands
-        bool Camera::take_picture();
+        bool take_picture();
 
 
     private:
-        CameraPtr cam;
+        //AVT::VmbAPI::CameraPtr cam;
 };
 
 #endif // CAMERA_H
 
-*/
