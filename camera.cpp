@@ -32,11 +32,16 @@ bool Camera::closeCamera(){
 
 int Camera::getExposureTime(){
     AVT::VmbAPI::FeaturePtr feature;
-    int time_us;
+    VmbInt64_t time_us;
+    std::string featureMode;
     if ( VmbErrorSuccess == cam ->GetFeatureByName( "ExposureMode", feature )){
-        if ( feature ==  'Timed'){
-            if ( VmbErrorSuccess == cam ->GetFeatureByName( "ExposureTime", feature )){
-                time_us = feature;
+        if(VmbErrorSuccess == feature->GetValue(featureMode)){
+            if (featureMode.compare("Timed") == 0){
+                if ( VmbErrorSuccess == cam ->GetFeatureByName( "ExposureTime", feature )){
+                    if(VmbErrorSuccess == feature->GetValue(time_us)){
+                        return time_us;
+                    }
+                }
             }
         }
     }
@@ -45,9 +50,12 @@ int Camera::getExposureTime(){
 
 bool Camera::setExposureTime(int time_us){
     AVT::VmbAPI::FeaturePtr feature;
+    std::string featureMode;
     if ( VmbErrorSuccess == cam ->GetFeatureByName( "ExposureMode", feature )){
-        if ( feature !=  'Timed'){
-            if(VmbErrorSuccess != feature->SetValue('Timed')) return false;
+        if(VmbErrorSuccess == feature->GetValue(featureMode)){
+            if (featureMode.compare("Timed") == 0){
+                if(VmbErrorSuccess != feature->SetValue("Timed")) return false;
+            }
         }
         if ( VmbErrorSuccess == cam ->GetFeatureByName( "ExposureTime", feature )){
             if(VmbErrorSuccess == feature->SetValue(time_us)) return true;
@@ -69,5 +77,6 @@ bool Camera::take_picture(){
             }
         }
     }
+    return false;
 }
 
