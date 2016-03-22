@@ -20,15 +20,10 @@ FramingWindow::FramingWindow()
     // Buttons
 
     webcamSettingsButton = new QPushButton("Webcam settings");
-    nextButton = new QPushButton("Next");
+    nextButton = new QPushButton("Next >");
     cancelButton = new QPushButton("Cancel");
 
-    // Layout
 
-    QGridLayout *layout = new QGridLayout;
-    layout->addWidget(webcamSettingsButton,2,2);
-    layout->addWidget(nextButton,3,1);
-    layout->addWidget(cancelButton,3,2);
 
 
 
@@ -39,7 +34,17 @@ FramingWindow::FramingWindow()
 
     // Signals and slots
 
+    connect(cancelButton, SIGNAL(clicked()), qApp, SLOT(quit()));
 
+
+
+    // Layout
+
+    QGridLayout *layout = new QGridLayout;
+
+    layout->addWidget(webcamSettingsButton,2,2);
+    layout->addWidget(nextButton,3,1);
+    layout->addWidget(cancelButton,3,2);
 
     setLayout(layout);
 

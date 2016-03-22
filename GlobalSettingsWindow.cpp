@@ -10,6 +10,7 @@
 #include <QApplication>
 #include <QPushButton>
 #include <iostream>
+#include <QGridLayout>
 #include "framingwindow.h" // TODO: remove after tests
 
 using namespace std;
@@ -26,16 +27,16 @@ GlobalSettingsWindow::GlobalSettingsWindow() {
 
     // Buttons
 
-    upButton = new QPushButton("Up", this);
-    leftButton = new QPushButton("Left", this);
-    downButton = new QPushButton("Down", this);
-    rightButton = new QPushButton("Right", this);
+    upButton = new QPushButton("Up ^");
+    leftButton = new QPushButton("< Left");
+    downButton = new QPushButton("Down v");
+    rightButton = new QPushButton("Right >");
 
-    finishButton = new QPushButton("Finish", this);
-    previousButton = new QPushButton("Previous", this);
+    finishButton = new QPushButton("Finish >");
+    previousButton = new QPushButton("< Previous");
 
-    cameraSettingsButton = new QPushButton("Indus. camera settings", this);
-    webcamSettingsButton = new QPushButton("Webcam settings", this);
+    cameraSettingsButton = new QPushButton("Indus. camera settings");
+    webcamSettingsButton = new QPushButton("Webcam settings");
 
     //QPushButton RegisterSettingsButton("Register settings"); // To open a window to choose the repository to save photos. Useful ??
 
@@ -44,26 +45,24 @@ GlobalSettingsWindow::GlobalSettingsWindow() {
 
 
 
-    // Show Buttons
+    // Layout
 
-    upButton->show();
-    leftButton->show();
-    downButton->show();
-    rightButton->show();
+    QGridLayout *layout = new QGridLayout;
 
-    finishButton->show();
+    layout->addWidget(upButton);
+    layout->addWidget(leftButton);
+    layout->addWidget(downButton);
+    layout->addWidget(rightButton);
+    layout->addWidget(finishButton);
+    layout->addWidget(previousButton);
+    layout->addWidget(cameraSettingsButton);
+    layout->addWidget(webcamSettingsButton);
 
-    cameraSettingsButton->show();
-    webcamSettingsButton->show();
+    setLayout(layout);
 
 }
 
-// Default destructor
-/*
-GlobalSettingsWindow::~GlobalSettingsWindow(){
 
-}*/
-/* Nothing to do: Child-widgets automatically deleted */
 
 
 // TODO: Remove after tests
@@ -78,9 +77,9 @@ int main(int argc, char *argv[])
     fra.show();
     cout << "FramingWindow instanciated" << endl;
 
-    /*GlobalSettingsWindow win;
+    GlobalSettingsWindow win;
     win.show();
-    cout << "G...Window instanciated" << endl; */
+    cout << "G...Window instanciated" << endl;
 
     return app.exec();
 
