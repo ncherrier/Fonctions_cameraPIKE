@@ -1,4 +1,4 @@
-#include "camera.h"
+/*#include "camera.h"
 
 
 Camera::Camera() :
@@ -71,3 +71,4 @@ bool Camera::take_picture(){
     }
 }
 
+*/

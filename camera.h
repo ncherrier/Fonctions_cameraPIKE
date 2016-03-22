@@ -1,4 +1,4 @@
-#include "VimbaCPP/Include/VimbaCPP.h"
+/*#include "VimbaCPP/Include/VimbaCPP.h"
 
 #ifndef CAMERA_H
 #define CAMERA_H
@@ -28,3 +28,4 @@ class Camera
 
 #endif // CAMERA_H
 
+*/

@@ -4,7 +4,8 @@ SOURCES += \
     main_tests.cpp \
     camera.cpp \
     MainWindow.cpp \
-    GlobalSettingsWindow.cpp
+    GlobalSettingsWindow.cpp \
+    framingwindow.cpp
 
 
 
@@ -49,7 +50,9 @@ HEADERS += \
     VimbaCPP/Include/VimbaSystem.hpp \
     VimbaImageTransform/Include/VmbCommonTypes.h \
     VimbaImageTransform/Include/VmbTransform.h \
-    VimbaImageTransform/Include/VmbTransformTypes.h
+    VimbaImageTransform/Include/VmbTransformTypes.h \
+    GlobalSettingsWindow.h \
+    framingwindow.h
 
 
 win32: LIBS += -L$$PWD/VimbaCPP/Lib/Win64/ -lVimbaCPP
