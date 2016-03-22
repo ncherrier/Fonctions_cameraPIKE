@@ -1,14 +1,12 @@
 #include "VimbaCPP/Include/VimbaCPP.h"
 
-#ifndef CAMERA_H
-#define CAMERA_H
+#ifndef CAMERAPIKE_H
+#define CAMERAPIKE_H
 
 
-class Camera
+class CameraPike : public AVT::VmbAPI::Camera
 {
     public:
-        Camera();
-        ~Camera();
 
         // Initialization
         bool openCamera();
@@ -21,10 +19,7 @@ class Camera
         // Picture commands
         bool take_picture();
 
-
-    private:
-        AVT::VmbAPI::CameraPtr cam;
 };
 
-#endif // CAMERA_H
+#endif // CAMERAPIKE_H
 

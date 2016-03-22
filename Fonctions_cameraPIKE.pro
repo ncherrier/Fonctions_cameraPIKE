@@ -52,10 +52,10 @@ HEADERS += \
     VimbaImageTransform/Include/VmbTransformTypes.h
 
 
-win32: LIBS += -L$$PWD/VimbaCPP/Lib/Win64/ -lVimbaCPP
+LIBS += -L$$PWD/VimbaCPP/Lib/Win64/ -lVimbaCPP
+LIBS += $$PWD/VimbaCPP/Bin/Win64/VimbaCPP.dll
+LIBS += $$PWD/VimbaCPP/Bin/Win64/VimbaC.dll
 
 INCLUDEPATH += $$PWD/VimbaCPP/Lib/Win64
 DEPENDPATH += $$PWD/VimbaCPP/Lib/Win64
 
-INCLUDEPATH += $$PWD/VimbaCPP/Bin/Win64
-DEPENDPATH += $$PWD/VimbaCPP/Bin/Win64
