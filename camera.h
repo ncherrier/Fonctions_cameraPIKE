@@ -1,4 +1,4 @@
-/*#include "VimbaCPP/Include/VimbaCPP.h"*/
+#include "VimbaCPP/Include/VimbaCPP.h"
 
 #ifndef CAMERA_H
 #define CAMERA_H
@@ -23,7 +23,7 @@ class Camera
 
 
     private:
-        //AVT::VmbAPI::CameraPtr cam;
+        AVT::VmbAPI::CameraPtr cam;
 };
 
 #endif // CAMERA_H

@@ -37,7 +37,7 @@
 namespace AVT {
 namespace VmbAPI {
 
-class ICameraListObserver 
+class IMEXPORT ICameraListObserver
 {
   public:
     //
@@ -53,18 +53,18 @@ class ICameraListObserver
     // [out]    UpdateTriggerType   reason                  The reason why the callback routine was triggered
     //                                                      (e.g., a new camera was plugged in)
     //
-    IMEXPORT virtual void CameraListChanged( CameraPtr pCam, UpdateTriggerType reason ) = 0;
+    virtual void CameraListChanged( CameraPtr pCam, UpdateTriggerType reason ) = 0;
 
     //
     // Method:      ICameraListObserver destructor
     //
     // Purpose:     Destroys an instance of class ICameraListObserver
     //
-    IMEXPORT virtual ~ICameraListObserver() {}
+    virtual ~ICameraListObserver() {}
 
   protected:
-    IMEXPORT ICameraListObserver() { /*No default ctor*/ }
-    IMEXPORT ICameraListObserver( const ICameraListObserver& ) { /* No copy ctor */ }
+    ICameraListObserver() { /*No default ctor*/ }
+    ICameraListObserver( const ICameraListObserver& ) { /* No copy ctor */ }
 };
 typedef std::vector<ICameraListObserverPtr> ICameraListObserverPtrVector;
 

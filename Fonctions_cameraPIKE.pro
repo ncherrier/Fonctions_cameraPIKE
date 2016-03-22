@@ -56,3 +56,6 @@ win32: LIBS += -L$$PWD/VimbaCPP/Lib/Win64/ -lVimbaCPP
 
 INCLUDEPATH += $$PWD/VimbaCPP/Lib/Win64
 DEPENDPATH += $$PWD/VimbaCPP/Lib/Win64
+
+INCLUDEPATH += $$PWD/VimbaCPP/Bin/Win64
+DEPENDPATH += $$PWD/VimbaCPP/Bin/Win64

@@ -36,7 +36,7 @@
 namespace AVT {
 namespace VmbAPI {
 
-class IInterfaceListObserver 
+class IMEXPORT IInterfaceListObserver
 {
   public:
     //
@@ -50,19 +50,19 @@ class IInterfaceListObserver
     // [out]    InterfacePtr        pInterface              The interface that triggered the event
     // [out]    UpdateTriggerType   reason                  The reason why the callback routine was triggered
     //
-    IMEXPORT virtual void InterfaceListChanged( InterfacePtr pInterface, UpdateTriggerType reason ) = 0;
+    virtual void InterfaceListChanged( InterfacePtr pInterface, UpdateTriggerType reason ) = 0;
 
     //
     // Method:      IInterfaceListObserver destructor
     //
     // Purpose:     Destroys an instance of class IInterfaceListObserver
     //
-    IMEXPORT virtual ~IInterfaceListObserver() {}
+    virtual ~IInterfaceListObserver() {}
 
   protected:
-    IMEXPORT IInterfaceListObserver() {};
-    IMEXPORT IInterfaceListObserver( const IInterfaceListObserver& ) { /* No copy ctor */ }
-    IMEXPORT IInterfaceListObserver& operator=( const IInterfaceListObserver& ) { /* No assignment operator */ return *this; }
+    IInterfaceListObserver() {}
+    IInterfaceListObserver( const IInterfaceListObserver& ) { /* No copy ctor */ }
+    IInterfaceListObserver& operator=( const IInterfaceListObserver& ) { /* No assignment operator */ return *this; }
     
 };
 typedef std::vector<IInterfaceListObserverPtr> IInterfaceListObserverPtrVector;

@@ -1,19 +1,19 @@
 #include "camera.h"
 
 
-/*Camera::Camera() :
-  cam(nullptr) {
-    CameraPtrVector available_cameras;
-    VimbaSystem &system = VimbaSystem :: GetInstance ();
+Camera::Camera() :
+  cam() {
+    AVT::VmbAPI::CameraPtrVector available_cameras;
+    AVT::VmbAPI::VimbaSystem &system = AVT::VmbAPI::VimbaSystem :: GetInstance ();
     if ( VmbErrorSuccess == system.Startup () ) {
       if ( VmbErrorSuccess == system.GetCameras( available_cameras ) ) {
-          cam = cameras[0];
+          cam = available_cameras[0];
       }
     }
 }
 
 Camera::~Camera(){
-    delete cam;
+    delete &cam;
 }
 
 bool Camera::openCamera(){
@@ -24,14 +24,14 @@ bool Camera::openCamera(){
 }
 
 bool Camera::closeCamera(){
-    if ( VmbErrorSuccess == cam.Close () ){
+    if ( VmbErrorSuccess == cam->Close() ){
         return true;
     }
     else return false;
 }
 
 int Camera::getExposureTime(){
-    FeaturePtr feature;
+    AVT::VmbAPI::FeaturePtr feature;
     int time_us;
     if ( VmbErrorSuccess == cam ->GetFeatureByName( "ExposureMode", feature )){
         if ( feature ==  'Timed'){
@@ -44,7 +44,7 @@ int Camera::getExposureTime(){
 }
 
 bool Camera::setExposureTime(int time_us){
-    FeaturePtr feature;
+    AVT::VmbAPI::FeaturePtr feature;
     if ( VmbErrorSuccess == cam ->GetFeatureByName( "ExposureMode", feature )){
         if ( feature !=  'Timed'){
             if(VmbErrorSuccess != feature->SetValue('Timed')) return false;
@@ -59,7 +59,7 @@ bool Camera::setExposureTime(int time_us){
 }
 
 bool Camera::take_picture(){
-    FeaturePtr feature;
+    AVT::VmbAPI::FeaturePtr feature;
     if ( VmbErrorSuccess == cam ->GetFeatureByName( "AcquisitionMode", feature )){
         if ( VmbErrorSuccess == feature ->SetValue( "Continuous" ) ){
             if ( VmbErrorSuccess == cam->GetFeatureByName( "AcquisitionStart",feature ) ){
@@ -70,4 +70,4 @@ bool Camera::take_picture(){
         }
     }
 }
-*/
+
