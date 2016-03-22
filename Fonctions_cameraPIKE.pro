@@ -4,7 +4,7 @@ SOURCES += \
     main_tests.cpp \
     camera.cpp \
     MainWindow.cpp \
-    SettingsWindow.cpp
+    GlobalSettingsWindow.cpp
 
 
 
