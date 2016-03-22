@@ -1,4 +1,4 @@
-#include "camera.h"
+/*#include "camera.h"
 
 
 bool CameraPike::openCamera(){
@@ -59,3 +59,4 @@ bool CameraPike::take_picture(){
     return false;
 }
 
+*/
