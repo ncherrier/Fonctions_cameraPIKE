@@ -1,12 +1,20 @@
 #include "camera.h"
 
-/*
-bool CameraPike::openCamera(){
-    return this->AVT::VmbAPI::Camera::Open( VmbAccessModeFull );
+CameraPike::CameraPike():
+    Camera() {
+    AVT::VmbAPI::CameraPtrVector available_cameras;
+    AVT::VmbAPI::VimbaSystem &system = AVT::VmbAPI::VimbaSystem :: GetInstance ();
+    if ( VmbErrorSuccess == system.Startup () ) {
+      if ( VmbErrorSuccess == system.GetCameras( available_cameras ) ) {
+          camera = available_cameras[0];
+      }
+    }
+    this->AVT::VmbAPI::Camera::Open( VmbAccessModeFull );
 }
 
-bool CameraPike::closeCamera(){
-    return this->AVT::VmbAPI::Camera::Close();
+CameraPike::~CameraPike():
+    ~Camera(){
+    this->AVT::VmbAPI::Camera::Close();
 }
 
 int CameraPike::getExposureTime(){
@@ -96,4 +104,4 @@ AVT::VmbAPI::FramePtr CameraPike::get_image(AVT::VmbAPI::IFrameObserverPtr frame
     return frame;
     // TODO : afficher l'image en question (actualiser)
 }
-*/
+
