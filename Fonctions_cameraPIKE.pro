@@ -7,7 +7,7 @@ SOURCES += \
     camera.cpp \
     MainWindow.cpp \
     GlobalSettingsWindow.cpp \
-    framingwindow.cpp
+    FramingWindow.cpp
 
 
 
@@ -54,7 +54,7 @@ HEADERS += \
     VimbaImageTransform/Include/VmbTransform.h \
     VimbaImageTransform/Include/VmbTransformTypes.h \
     GlobalSettingsWindow.h \
-    framingwindow.h
+    FramingWindow.h
 
 LIBS += \
     -L$$PWD/VimbaCPP/Lib/Win32 -lVimbaCPP \
@@ -63,6 +63,7 @@ LIBS += \
     -L$$PWD/VimbaC/Lib/Win32 -lVimbaC \
     $$PWD/VimbaC/Bin/Win32/VimbaC.dll \
 
-#INCLUDEPATH += $$PWD/VimbaCPP/Lib/Win32
-#DEPENDPATH += $$PWD/VimbaCPP/Lib/Win32
+
+INCLUDEPATH += $$PWD/VimbaCPP/Lib/Win32
+DEPENDPATH += $$PWD/VimbaCPP/Lib/Win32
 

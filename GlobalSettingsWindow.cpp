@@ -1,7 +1,7 @@
-/* Fenetre pour les reglages generaux :
- * Choix de l'emplacement de la mise au point,
- * Retour video (webcam) pour le cadrage,
+/* Fenetre pour les reglages :
+ * Choix de l'emplacement de la mise au point, 
  * Retour video (camera indus.) pour la mise au point,
+ * Retour video (webcam) (pour situer l'endroit de la mise au point)
  * Acces aux reglages de la camera indus. (et de la webcam ?),
  * Acces au choix de dossier de destination.
  * */
@@ -11,7 +11,7 @@
 #include <QPushButton>
 #include <iostream>
 #include <QGridLayout>
-#include "framingwindow.h" // TODO: remove after tests
+#include "FramingWindow.h" // TODO: remove after tests
 
 using namespace std;
 
@@ -64,24 +64,4 @@ GlobalSettingsWindow::GlobalSettingsWindow() {
 
 
 
-
-// TODO: Remove after tests
-int main(int argc, char *argv[])
-{
-
-    QApplication app(argc, argv);
-
-    cout << "hello!" << endl;
-
-    FramingWindow fra;
-    fra.show();
-    cout << "FramingWindow instanciated" << endl;
-
-    GlobalSettingsWindow win;
-    win.show();
-    cout << "G...Window instanciated" << endl;
-
-    return app.exec();
-
-}
 

@@ -1,8 +1,9 @@
+/*
 #include <QtGui>
 
 #include "camera.h"
 
-/*int main(int argc, char *argv[]) {
+int main(int argc, char *argv[]) {
    CameraPike camera;
    AVT::VmbAPI::CameraPtrVector available_cameras;
    AVT::VmbAPI::VimbaSystem &system = AVT::VmbAPI::VimbaSystem :: GetInstance ();
