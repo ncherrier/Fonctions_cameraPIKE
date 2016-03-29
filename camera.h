@@ -1,3 +1,4 @@
+/*
 #ifndef CAMERAPIKE_H
 #define CAMERAPIKE_H
 
@@ -34,3 +35,5 @@ class CameraPike : public AVT::VmbAPI::Camera
 #endif // CAMERAPIKE_H
 
 
+*/
+// AVT::VmbAPI::FramePtr

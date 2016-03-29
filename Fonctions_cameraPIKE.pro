@@ -5,9 +5,12 @@ QT += widgets # Indispensable pour interface graphique !!!
 SOURCES += \
     main_tests.cpp \
     camera.cpp \
-    MainWindow.cpp \
-    GlobalSettingsWindow.cpp \
-    FramingWindow.cpp
+    FramingWindow.cpp \
+    SettingsWindow.cpp \
+    cameraSettingsWindow.cpp \
+    webcamSettingsWindow.cpp \
+    ProcessWindow.cpp \
+    MainProg.cpp
 
 
 
@@ -53,8 +56,12 @@ HEADERS += \
     VimbaImageTransform/Include/VmbCommonTypes.h \
     VimbaImageTransform/Include/VmbTransform.h \
     VimbaImageTransform/Include/VmbTransformTypes.h \
-    GlobalSettingsWindow.h \
-    FramingWindow.h
+    FramingWindow.h \
+    SettingsWindow.h \
+    webcamSettingsWindow.h \
+    cameraSettingsWindow.h \
+    ProcessWindow.h \
+    MainProg.h
 
 LIBS += \
     -L$$PWD/VimbaCPP/Lib/Win32 -lVimbaCPP \
