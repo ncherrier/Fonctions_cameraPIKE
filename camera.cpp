@@ -91,10 +91,9 @@ bool CameraPike::stop_getting_images(){
 }
 
 AVT::VmbAPI::FramePtr CameraPike::get_image(AVT::VmbAPI::IFrameObserverPtr frameObserver){
-    int bufferCount = 3;
-    AVT::VmbAPI::IFrameObserverPtr frameObserver;
-    if(VmbErrorSuccess == this->StartContinuousImageAcquisition(bufferCount,frameObserver)) {
-
-    }
+    AVT::VmbAPI::FramePtr frame;
+    frameObserver->FrameReceived(frame);
+    return frame;
+    // TODO : afficher l'image en question (actualiser)
 }
 */
