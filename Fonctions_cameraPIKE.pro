@@ -3,20 +3,19 @@ QT += core gui
 QT += widgets # Indispensable pour interface graphique !!!
 
 SOURCES += \
-    main_tests.cpp \
     camera.cpp \
     FramingWindow.cpp \
     SettingsWindow.cpp \
     cameraSettingsWindow.cpp \
     webcamSettingsWindow.cpp \
     ProcessWindow.cpp \
-    MainProg.cpp
+    MainProg.cpp \
+    camera_settings.cpp
 
 
 
 HEADERS += \
     camera.h \
-    main_tests.h \
     ThirdParty/TinyXML/Include/tinystr.h \
     ThirdParty/TinyXML/Include/tinyxml.h \
     Tools/ClassGenerator/Win32/Templates/CppTemplate.h \
