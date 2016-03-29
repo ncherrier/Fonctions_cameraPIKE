@@ -1,16 +1,16 @@
-#ifndef GLOBALSETTINGSWINDOW_H
-#define GLOBALSETTINGSWINDOW_H
+#ifndef SETTINGSWINDOW_H
+#define SETTINGSWINDOW_H
 
 #include <vector>
 #include <QPushButton>
 #include <QWidget>
 
-class GlobalSettingsWindow : public QWidget
+class SettingsWindow : public QWidget
 {
 
     public:
-        GlobalSettingsWindow(); // default constructor
-        //virtual ~GlobalSettingsWindow(); // default destructor - useless
+        SettingsWindow(); // default constructor
+        //virtual ~SettingsWindow(); // default destructor - useless
 
     private:
         QPushButton *upButton;
@@ -24,4 +24,4 @@ class GlobalSettingsWindow : public QWidget
 
 };
 
-#endif // GLOBALSETTINGSWINDOW_H
+#endif // SETTINGSWINDOW_H

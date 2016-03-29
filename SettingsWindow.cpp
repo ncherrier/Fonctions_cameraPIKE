@@ -6,7 +6,7 @@
  * Acces au choix de dossier de destination.
  * */
 
-#include "GlobalSettingsWindow.h"
+#include "SettingsWindow.h"
 #include <QApplication>
 #include <QPushButton>
 #include <iostream>
@@ -18,7 +18,7 @@ using namespace std;
 // Constructors and destructors
 
 // Default Constructor
-GlobalSettingsWindow::GlobalSettingsWindow() {
+SettingsWindow::SettingsWindow() {
 
     // Set size
 
