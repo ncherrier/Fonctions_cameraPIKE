@@ -1,3 +1,5 @@
+QT += core gui
+
 QT += widgets # Indispensable pour interface graphique !!!
 
 SOURCES += \
@@ -61,11 +63,14 @@ HEADERS += \
     ProcessWindow.h \
     MainProg.h
 
+LIBS += \
+    -L$$PWD/VimbaCPP/Lib/Win32 -lVimbaCPP \
+    $$PWD/VimbaCPP/Bin/Win32/VimbaCPP.dll \
+    $$PWD/VimbaCPP/Bin/Win32/VimbaC.dll \
+    -L$$PWD/VimbaC/Lib/Win32 -lVimbaC \
+    $$PWD/VimbaC/Bin/Win32/VimbaC.dll \
 
-LIBS += -L$$PWD/VimbaCPP/Lib/Win64/VimbaCPP.lib
-LIBS += $$PWD/VimbaCPP/Bin/Win64/VimbaCPP.dll
-LIBS += $$PWD/VimbaCPP/Bin/Win64/VimbaC.dll
 
-INCLUDEPATH += $$PWD/VimbaCPP/Lib/Win64
-DEPENDPATH += $$PWD/VimbaCPP/Lib/Win64
+INCLUDEPATH += $$PWD/VimbaCPP/Lib/Win32
+DEPENDPATH += $$PWD/VimbaCPP/Lib/Win32
 

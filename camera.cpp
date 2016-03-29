@@ -1,4 +1,4 @@
-/*#include "camera.h"
+#include "camera.h"
 
 
 bool CameraPike::openCamera(){
@@ -45,7 +45,7 @@ bool CameraPike::setExposureTime(int time_us){
     else return false;
 }
 
-bool CameraPike::take_picture(){
+bool CameraPike::start_acquisition(){
     AVT::VmbAPI::FeaturePtr feature;
     if ( VmbErrorSuccess == this ->GetFeatureByName( "AcquisitionMode", feature )){
         if ( VmbErrorSuccess == feature ->SetValue( "Continuous" ) ){
@@ -59,4 +59,41 @@ bool CameraPike::take_picture(){
     return false;
 }
 
-*/
+bool CameraPike::stop_acquisition(){
+    AVT::VmbAPI::FeaturePtr feature;
+    if ( VmbErrorSuccess == this->GetFeatureByName( "AcquisitionStop",feature ) ){
+        if ( VmbErrorSuccess == feature ->RunCommand () ){
+            return true;
+        }
+    }
+    return false;
+}
+
+// Pour toutes les fonctions suivantes : nécessite d'avoir appelé start_acquisition avant !!
+
+AVT::VmbAPI::FramePtr CameraPike::take_picture(){
+    AVT::VmbAPI::FramePtr frame;
+    VmbUint32_t timeout;
+    this->AcquireSingleImage(frame,timeout);
+    return frame;
+}
+
+AVT::VmbAPI::IFrameObserverPtr CameraPike::start_getting_images(){
+    int bufferCount = 3;
+    AVT::VmbAPI::IFrameObserverPtr frameObserver;
+    if(VmbErrorSuccess == this->StartContinuousImageAcquisition(bufferCount,frameObserver)) {
+        return frameObserver;
+    }
+}
+
+bool CameraPike::stop_getting_images(){
+    return this->StopContinuousImageAcquisition();
+}
+
+AVT::VmbAPI::FramePtr CameraPike::get_image(AVT::VmbAPI::IFrameObserverPtr frameObserver){
+    int bufferCount = 3;
+    AVT::VmbAPI::IFrameObserverPtr frameObserver;
+    if(VmbErrorSuccess == this->StartContinuousImageAcquisition(bufferCount,frameObserver)) {
+
+    }
+}
