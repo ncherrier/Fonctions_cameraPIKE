@@ -2,6 +2,8 @@ QT += core gui
 
 QT += widgets # Indispensable pour interface graphique !!!
 
+
+
 SOURCES += \
     main_tests.cpp \
     camera.cpp \

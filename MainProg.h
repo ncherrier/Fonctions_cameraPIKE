@@ -15,13 +15,13 @@ class MainProg : public QWidget
 
     public:
         MainProg(); // Default constructor, not to be used in normal conditions
-        MainProg(int, char*); // "Right" constructor, with args of main
+        MainProg(int, char*[]); // "Right" constructor, with args of main
         virtual ~MainProg(); // Default destructor
 
     public slots:
         void openWebcamSettingsWindow(); // TODO: rename (?)
         void openCameraSettingsWindow();
-        void openFramingWindow(); // uitle ?
+        void openFramingWindow(); // utile ?
         void openSettingsWindow();
         void openProcessWindow();
 
@@ -34,7 +34,7 @@ class MainProg : public QWidget
         SettingsWindow *set;
         ProcessWindow *pro;
 
-        auto mainFunction();
+        void mainFunction();
 
 };
 

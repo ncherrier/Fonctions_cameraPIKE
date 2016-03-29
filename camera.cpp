@@ -1,6 +1,6 @@
 #include "camera.h"
 
-
+/*
 bool CameraPike::openCamera(){
     return this->AVT::VmbAPI::Camera::Open( VmbAccessModeFull );
 }
@@ -97,3 +97,4 @@ AVT::VmbAPI::FramePtr CameraPike::get_image(AVT::VmbAPI::IFrameObserverPtr frame
 
     }
 }
+*/
