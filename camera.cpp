@@ -12,6 +12,8 @@ CameraPike::CameraPike():
     this->AVT::VmbAPI::Camera::Open( VmbAccessModeFull );
 }
 
+
+
 CameraPike::~CameraPike():
     ~Camera(){
     this->AVT::VmbAPI::Camera::Close();
@@ -104,3 +106,4 @@ AVT::VmbAPI::FramePtr CameraPike::get_image(AVT::VmbAPI::IFrameObserverPtr frame
     return frame;
     // TODO : afficher l'image en question (actualiser)
 }
+
