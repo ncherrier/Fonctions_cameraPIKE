@@ -12,8 +12,6 @@ CameraPike::CameraPike():
     this->AVT::VmbAPI::Camera::Open( VmbAccessModeFull );
 }
 
-
-
 CameraPike::~CameraPike():
     ~Camera(){
     this->AVT::VmbAPI::Camera::Close();
