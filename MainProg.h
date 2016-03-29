@@ -14,8 +14,8 @@ class MainProg : public QWidget
     // /!\ Build -> run QMAKE before building and running
 
     public:
-        MainProg(); // Default constructor, not to be used in normal conditions
-        MainProg(int, char*[]); // "Right" constructor, with args of main
+        //MainProg(); // Default constructor, not to be used in normal conditions
+        MainProg(int, char**); // "Right" constructor, with args of main
         virtual ~MainProg(); // Default destructor
 
     public slots:

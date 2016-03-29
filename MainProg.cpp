@@ -35,21 +35,23 @@ void MainProg::mainFunction(){
 };
 
 // Constructor (with arguments of main)
-MainProg::MainProg(int argc, char *argv[]) {
+MainProg::MainProg(int argc, char **argv)
+: app(argc, argv)
+{
 
-    app = new QApplication(argc, argv);
     mainFunction();
 
 }
 
 // Default constructor (no argument)
-MainProg::MainProg() {
+/*MainProg::MainProg() {
 
-    char *argv = new char[0];
-    app = new QApplication(0, argv);
+    char * argv = new char[1]();
+    app = new QApplication(0, *argv);
     mainFunction();
 
-}
+}*/
+// TODO: uncomment, regler le bug pour avoir une belle syntaxe. inutile en soi
 
 // Default destructor
 MainProg::~MainProg(){

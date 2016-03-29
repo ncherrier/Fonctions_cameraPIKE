@@ -65,13 +65,13 @@ HEADERS += \
     ProcessWindow.h \
     MainProg.h
 
-LIBS += \
-    -L$$PWD/VimbaCPP/Lib/Win32 -lVimbaCPP \
-    $$PWD/VimbaCPP/Bin/Win32/VimbaCPP.dll \
-    $$PWD/VimbaCPP/Bin/Win32/VimbaC.dll \
-    -L$$PWD/VimbaC/Lib/Win32 -lVimbaC \
-    $$PWD/VimbaC/Bin/Win32/VimbaC.dll \
-
+#LIBS += \
+#    -L$$PWD/VimbaCPP/Lib/Win32 -lVimbaCPP \
+#    $$PWD/VimbaCPP/Bin/Win32/VimbaCPP.dll \
+#    $$PWD/VimbaCPP/Bin/Win32/VimbaC.dll \
+#    -L$$PWD/VimbaC/Lib/Win32 -lVimbaC \
+#    $$PWD/VimbaC/Bin/Win32/VimbaC.dll \
+# TODO: uncomment and solve inclusion bug
 
 INCLUDEPATH += $$PWD/VimbaCPP/Lib/Win32
 DEPENDPATH += $$PWD/VimbaCPP/Lib/Win32
