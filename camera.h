@@ -4,7 +4,7 @@
 
 #include "VimbaCPP/Include/VimbaCPP.h"
 
-/*
+
 class CameraPike : public AVT::VmbAPI::Camera
 {
     public:
@@ -14,6 +14,9 @@ class CameraPike : public AVT::VmbAPI::Camera
         // Features
         int getExposureTime();
         bool setExposureTime(int time_us);
+        int* getSensorSize(); // array 0 : width, 1 : height (en pixels)
+        int* getPictureSize(); // idem
+        std::string getPixelFormat();
 
         // Picture commands
         // Appeler au début et à la fin du process entier
@@ -25,12 +28,12 @@ class CameraPike : public AVT::VmbAPI::Camera
 
         AVT::VmbAPI::IFrameObserverPtr start_getting_images();
         bool stop_getting_images();
-        AVT::VmbAPI::FramePtr get_image(AVT::VmbAPI::IFrameObserverPtr frameObserver); // en continu, évènement nouvelle frame => actualisation de l'affichage
+        void get_image(AVT::VmbAPI::IFrameObserverPtr frameObserver); // en continu, évènement nouvelle frame => actualisation de l'affichage
 
 
 
 };
-*/
+
 
 #endif // CAMERAPIKE_H
 

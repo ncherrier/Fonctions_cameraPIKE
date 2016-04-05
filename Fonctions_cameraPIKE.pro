@@ -12,8 +12,7 @@ SOURCES += \
     webcamSettingsWindow.cpp \
     ProcessWindow.cpp \
     MainProg.cpp \
-    #camera_settings.cpp \ #bug...
-    #camera_caracteristiques.cpp #bug...
+    camera_settings.cpp
 
 HEADERS += \
     camera.h \
