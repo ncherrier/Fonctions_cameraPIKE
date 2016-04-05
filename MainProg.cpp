@@ -1,4 +1,4 @@
-#include <QApplication>
+/*#include <QApplication>
 #include <QPushButton>
 #include <iostream>
 #include "cameraSettingsWindow.h"
@@ -10,11 +10,12 @@
 
 using namespace std;
 
-
+*/
 /* Slots */
 /*void MainProg::openWebcamSettingsWindow() {}
 
 /* Instanciate all windows */
+/*
 WebcamSettingsWindow const * MainProg::web = new WebcamSettingsWindow();
 CameraSettingsWindow const * MainProg::cam = new CameraSettingsWindow();
 FramingWindow const * MainProg::fra = new FramingWindow();
@@ -69,6 +70,7 @@ MainProg::MainProg(int argc, char **argv)
 // TODO: uncomment, regler le bug pour avoir une belle syntaxe. inutile en soi
 
 // Default destructor
+/*
 MainProg::~MainProg(){
     // TODO
 }
@@ -88,4 +90,4 @@ int main(int argc, char *argv[])
 
 
 }
-
+*/
