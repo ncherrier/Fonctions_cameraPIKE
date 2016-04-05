@@ -10,10 +10,6 @@ class CameraPike : public AVT::VmbAPI::Camera
         CameraPike();
         ~CameraPike();
 
-        // Initialization
-        bool openCamera();
-        bool closeCamera();
-
         // Features
         int getExposureTime();
         bool setExposureTime(int time_us);
