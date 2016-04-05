@@ -11,12 +11,22 @@ class CameraPike : public AVT::VmbAPI::Camera
         CameraPike();
         ~CameraPike();
 
-        // Features
-        int getExposureTime();
-        bool setExposureTime(int time_us);
-        int* getSensorSize(); // array 0 : width, 1 : height (en pixels)
+        // Basic features
+        std::string getName();
+        int* getSensorSize(); // array 0 : width, 1 : height (pixels)
         int* getPictureSize(); // idem
         std::string getPixelFormat();
+
+        // Operations on image
+        bool reverseX(); // symétrise horizontalement l'image envoyée par la caméra
+        bool reverseY(); // idem mais verticalement
+        bool setPixelColorFilter_auto(); // filtre couleur automatique (aucun ?)
+        std::string getPixelColorFilter(); // récupérer le type de filtre couleur appliqué
+        bool setPixelColorFilter(char *mode); // variables possibles : BayerRG BayerGB BayerGR BayerBG
+
+        // Acquisition control
+        int getExposureTime();
+        bool setExposureTime(int time_us);
 
         // Picture commands
         // Appeler au début et à la fin du process entier
