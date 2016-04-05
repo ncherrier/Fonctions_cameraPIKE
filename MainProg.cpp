@@ -1,14 +1,17 @@
 #include <QApplication>
 #include <QPushButton>
 #include <iostream>
+#include "cameraSettingsWindow.h"
+#include "webcamSettingsWindow.h"
 #include "SettingsWindow.h"
 #include "FramingWindow.h"
+#include "ProcessWindow.h"
 #include "MainProg.h"
 
 using namespace std;
 
 /* Slots */
-void MainProg::openWebcamSettingsWindow() {}
+/*void MainProg::openWebcamSettingsWindow() {}
 
 void MainProg::openCameraSettingsWindow() {}
 
@@ -21,24 +24,26 @@ void MainProg::openSettingsWindow() {
     cout << "G...Window instanciated" << endl;
 }
 
-void MainProg::openProcessWindow() {}
+void MainProg::openProcessWindow() {} */
 
 // main programm
-void MainProg::mainFunction(){
+int MainProg::mainFunction(){
     cout << "hello!" << endl;
 
 
-    //fra.show();
-    cout << "FramingWindow shown" << endl;
 
-    //return app->exec();
+
+    //fra->show();
+    //cout << "FramingWindow shown" << endl;
+
+    return app->exec();
 };
 
 // Constructor (with arguments of main)
 MainProg::MainProg(int argc, char **argv)
-: app(argc, argv)
 {
 
+    app = new QApplication(argc, argv);
     mainFunction();
 
 }
@@ -58,12 +63,18 @@ MainProg::~MainProg(){
     // TODO
 }
 
+// Initialize static attributes
+void MainProg::init(){
+
+}
 
 // TODO: Remove after tests (?)
 int main(int argc, char *argv[])
 {
 
     MainProg mainProg(argc, argv);
+    mainProg.init();
+
 
 }
 

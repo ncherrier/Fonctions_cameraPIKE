@@ -1,5 +1,5 @@
 #include "camera.h"
-
+/*
 CameraPike::CameraPike():
     Camera() {
     AVT::VmbAPI::CameraPtrVector available_cameras;
@@ -105,3 +105,4 @@ AVT::VmbAPI::FramePtr CameraPike::get_image(AVT::VmbAPI::IFrameObserverPtr frame
     // TODO : afficher l'image en question (actualiser)
 }
 
+*/

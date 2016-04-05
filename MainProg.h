@@ -8,7 +8,7 @@
 #include "SettingsWindow.h"
 #include "ProcessWindow.h"
 
-class MainProg : public QWidget
+class MainProg : public QObject
 {
     Q_OBJECT // To be able to define new slots (interactions with user)
     // /!\ Build -> run QMAKE before building and running
@@ -18,24 +18,34 @@ class MainProg : public QWidget
         MainProg(int, char**); // "Right" constructor, with args of main
         virtual ~MainProg(); // Default destructor
 
-    public slots:
+        void init();
+
+    /*public slots: // utile ?? ne devrait peut-etre pas etre ici
         void openWebcamSettingsWindow(); // TODO: rename (?)
         void openCameraSettingsWindow();
         void openFramingWindow(); // utile ?
         void openSettingsWindow();
-        void openProcessWindow();
+        void openProcessWindow();*/
+
+        static WebcamSettingsWindow *web; // settings for the webcam (= webcam used for framing)
+        static CameraSettingsWindow *cam; // settings for the industrial camera
+        static FramingWindow *fra;
+        static SettingsWindow *set;
+        static ProcessWindow *pro;
+
+    //protected:
 
     private:
         QApplication *app;
 
-        WebcamSettingsWindow *web; // settings for the webcam (= webcam used for framing)
-        CameraSettingsWindow *cam; // settings for the industrial camera
-        FramingWindow *fra;
-        SettingsWindow *set;
-        ProcessWindow *pro;
-
-        void mainFunction();
+        int mainFunction();
 
 };
+
+MainProg::web = new WebcamSettingsWindow();
+MainProg::cam = new CameraSettingsWindow();
+MainProg::fra = new FramingWindow();
+MainProg::set = new SettingsWindow();
+MainProg::pro = new ProcessWindow();
 
 #endif // MAINPROG_H
