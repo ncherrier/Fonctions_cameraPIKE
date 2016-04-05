@@ -98,11 +98,11 @@ bool CameraPike::stop_getting_images(){
     return this->StopContinuousImageAcquisition();
 }
 
-AVT::VmbAPI::FramePtr CameraPike::get_image(AVT::VmbAPI::IFrameObserverPtr frameObserver){
+void CameraPike::get_image(AVT::VmbAPI::IFrameObserverPtr frameObserver){
     AVT::VmbAPI::FramePtr frame;
     frameObserver->FrameReceived(frame);
     return frame;
-    // TODO : afficher l'image en question (actualiser)
+    // TODO : affichage de l'image en question (actualiser)
 }
 
 */
