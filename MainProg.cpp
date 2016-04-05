@@ -10,6 +10,13 @@
 
 using namespace std;
 
+/* Instanciate all windows */
+WebcamSettingsWindow const * MainProg::web = new WebcamSettingsWindow();
+CameraSettingsWindow const * MainProg::cam = new CameraSettingsWindow();
+FramingWindow const * MainProg::fra = new FramingWindow();
+SettingsWindow const * MainProg::set = new SettingsWindow();
+ProcessWindow const * MainProg::pro = new ProcessWindow();
+
 /* Slots */
 /*void MainProg::openWebcamSettingsWindow() {}
 
@@ -71,9 +78,9 @@ void MainProg::init(){
 // TODO: Remove after tests (?)
 int main(int argc, char *argv[])
 {
-
-    MainProg mainProg(argc, argv);
-    mainProg.init();
+    cout << "hello! in main" << endl;
+    //MainProg mainProg(argc, argv);
+    //mainProg.init();
 
 
 }

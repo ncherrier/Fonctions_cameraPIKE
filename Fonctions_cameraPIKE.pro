@@ -12,8 +12,8 @@ SOURCES += \
     webcamSettingsWindow.cpp \
     ProcessWindow.cpp \
     MainProg.cpp \
-    camera_settings.cpp \
-    camera_caracteristiques.cpp
+    #camera_settings.cpp \ #bug...
+    #camera_caracteristiques.cpp #bug...
 
 HEADERS += \
     camera.h \
@@ -64,7 +64,8 @@ HEADERS += \
     MainProg.h
 
 #LIBS += \
-#    -L$$PWD/VimbaCPP/Lib/Win32 -lVimbaCPP \
+#    -L$$PWD/VimbaCPP/Lib/Win32 -lVimbaCPP
+#\
 #    $$PWD/VimbaCPP/Bin/Win32/VimbaCPP.dll \
 #    $$PWD/VimbaCPP/Bin/Win32/VimbaC.dll \
 #    -L$$PWD/VimbaC/Lib/Win32 -lVimbaC \

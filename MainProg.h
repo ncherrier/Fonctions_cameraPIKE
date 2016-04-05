@@ -27,11 +27,11 @@ class MainProg : public QObject
         void openSettingsWindow();
         void openProcessWindow();*/
 
-        static WebcamSettingsWindow *web; // settings for the webcam (= webcam used for framing)
-        static CameraSettingsWindow *cam; // settings for the industrial camera
-        static FramingWindow *fra;
-        static SettingsWindow *set;
-        static ProcessWindow *pro;
+        static WebcamSettingsWindow const *web; // settings for the webcam (= webcam used for framing)
+        static CameraSettingsWindow const *cam; // settings for the industrial camera
+        static FramingWindow const *fra;
+        static SettingsWindow const *set;
+        static ProcessWindow const *pro;
 
     //protected:
 
@@ -41,11 +41,5 @@ class MainProg : public QObject
         int mainFunction();
 
 };
-
-MainProg::web = new WebcamSettingsWindow();
-MainProg::cam = new CameraSettingsWindow();
-MainProg::fra = new FramingWindow();
-MainProg::set = new SettingsWindow();
-MainProg::pro = new ProcessWindow();
 
 #endif // MAINPROG_H
