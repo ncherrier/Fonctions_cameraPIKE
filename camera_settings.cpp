@@ -1,7 +1,7 @@
 #include <string>
 
 #include "camera.h"
-
+/*
 std::string CameraPike::getName(){
     AVT::VmbAPI::FeaturePtr feature;
     std::string name;
@@ -91,3 +91,4 @@ bool CameraPike::setExposureTime(int time_us){
     }
     else return false;
 }
+*/

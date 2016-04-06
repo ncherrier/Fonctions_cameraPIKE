@@ -14,11 +14,11 @@ class MainProg : public QObject
     // /!\ Build -> run QMAKE before building and running
 
     public:
+        //static Windows const * windows;
+
         //MainProg(); // Default constructor, not to be used in normal conditions
         MainProg(int, char**); // "Right" constructor, with args of main
         virtual ~MainProg(); // Default destructor
-
-        void init();
 
     /*public slots: // utile ?? ne devrait peut-etre pas etre ici
         void openWebcamSettingsWindow(); // TODO: rename (?)
@@ -27,19 +27,26 @@ class MainProg : public QObject
         void openSettingsWindow();
         void openProcessWindow();*/
 
-        static WebcamSettingsWindow const *web; // settings for the webcam (= webcam used for framing)
-        static CameraSettingsWindow const *cam; // settings for the industrial camera
+        //static WebcamSettingsWindow const *web; // settings for the webcam (= webcam used for framing)
+        /*static CameraSettingsWindow const *cam; // settings for the industrial camera
         static FramingWindow const *fra;
         static SettingsWindow const *set;
         static ProcessWindow const *pro;
+//        static QApplication const *app;*/
+        QApplication *app;
 
     //protected:
 
     private:
-        QApplication *app;
 
         int mainFunction();
 
 };
+
+/*WebcamSettingsWindow const * web = new WebcamSettingsWindow();
+CameraSettingsWindow const * cam = new CameraSettingsWindow();
+FramingWindow const * fra = new FramingWindow();
+SettingsWindow const * set = new SettingsWindow();
+ProcessWindow const * pro = new ProcessWindow();*/
 
 #endif // MAINPROG_H
