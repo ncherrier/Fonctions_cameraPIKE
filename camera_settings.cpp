@@ -7,9 +7,9 @@ std::string CameraPike::getName(){
     std::string name;
     if ( VmbErrorSuccess == this ->GetFeatureByName( "Name", feature )){
         if(VmbErrorSuccess == feature->GetValue(name)){
-            return name;
         }
     }
+    return name;
 }
 
 int* CameraPike::getSensorSize(){
@@ -26,7 +26,7 @@ int* CameraPike::getSensorSize(){
             }
         }
     }
-    return size[0];
+    return size;
 }
 
 int* CameraPike::getPictureSize(){
@@ -43,7 +43,7 @@ int* CameraPike::getPictureSize(){
             }
         }
     }
-    return size[0];
+    return size;
 }
 
 std::string CameraPike::getPixelFormat(){
@@ -51,9 +51,9 @@ std::string CameraPike::getPixelFormat(){
     std::string format;
     if ( VmbErrorSuccess == this ->GetFeatureByName( "PixelFormat", feature )){
         if(VmbErrorSuccess == feature->GetValue(format)){
-            return format;
         }
     }
+    return format;
 }
 
 int CameraPike::getExposureTime(){
@@ -90,5 +90,59 @@ bool CameraPike::setExposureTime(int time_us){
         else return false;
     }
     else return false;
+}
+
+bool CameraPike::reverseX(){
+    AVT::VmbAPI::FeaturePtr feature;
+    if ( VmbErrorSuccess == this ->GetFeatureByName( "ReverseX", feature )){
+        if ( VmbErrorSuccess == feature->RunCommand()){
+            return true;
+        }
+    }
+    return false;
+}
+
+bool CameraPike::reverseY(){
+    AVT::VmbAPI::FeaturePtr feature;
+    if ( VmbErrorSuccess == this ->GetFeatureByName( "ReverseY", feature )){
+        if ( VmbErrorSuccess == feature->RunCommand()){
+            return true;
+        }
+    }
+    return false;
+}
+
+bool CameraPike::setPixelColorFilter_auto(){
+    AVT::VmbAPI::FeaturePtr feature;
+    if ( VmbErrorSuccess == this ->GetFeatureByName( "PixelColorFilterAuto", feature )){
+        if ( VmbErrorSuccess == feature->SetValue("Auto")){
+            return true;
+        }
+    }
+    return false;
+}
+
+std::string CameraPike::getPixelColorFilter(){
+    AVT::VmbAPI::FeaturePtr feature;
+    std::string mode;
+    if ( VmbErrorSuccess == this ->GetFeatureByName( "PixelColorFilter", feature )){
+        if ( VmbErrorSuccess == feature->GetValue(mode)){
+        }
+    }
+    return mode;
+}
+
+bool CameraPike::setPixelColorFilter(char *mode){
+    AVT::VmbAPI::FeaturePtr feature;
+    if ( VmbErrorSuccess == this ->GetFeatureByName( "PixelColorFilterAuto", feature )){
+        if ( VmbErrorSuccess == feature->SetValue("Manual")){
+            if ( VmbErrorSuccess == this ->GetFeatureByName( "PixelColorFilter", feature )){
+                if ( VmbErrorSuccess == feature->SetValue(mode)){
+                    return true;
+                }
+            }
+        }
+    }
+    return false;
 }
 */

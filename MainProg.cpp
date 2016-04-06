@@ -1,4 +1,4 @@
-#include <QApplication>
+/*#include <QApplication>
 #include <QPushButton>
 #include <iostream>
 #include "cameraSettingsWindow.h"
@@ -10,15 +10,20 @@
 
 using namespace std;
 
+*/
+/* Slots */
+/*void MainProg::openWebcamSettingsWindow() {}
+
 /* Instanciate all windows */
-/*WebcamSettingsWindow const * MainProg::web = new WebcamSettingsWindow();
+
+/*
+WebcamSettingsWindow const * MainProg::web = new WebcamSettingsWindow();
 CameraSettingsWindow const * MainProg::cam = new CameraSettingsWindow();
 FramingWindow const * MainProg::fra = new FramingWindow();
 SettingsWindow const * MainProg::set = new SettingsWindow();
 ProcessWindow const * MainProg::pro = new ProcessWindow();*/
 
-/* Slots */
-/*void MainProg::openWebcamSettingsWindow() {}
+
 
 void MainProg::openCameraSettingsWindow() {}
 
@@ -31,7 +36,7 @@ void MainProg::openSettingsWindow() {
     cout << "G...Window instanciated" << endl;
 }
 
-void MainProg::openProcessWindow() {} */
+void MainProg::openProcessWindow() {}
 
 // main programm
 int MainProg::mainFunction(){
@@ -64,9 +69,11 @@ MainProg::MainProg(int argc, char **argv)
 // TODO: uncomment, regler le bug pour avoir une belle syntaxe. inutile en soi
 
 // Default destructor
+/*
 MainProg::~MainProg(){
     // TODO
 }
+
 
 
 // TODO: Remove after tests (?)
@@ -78,4 +85,4 @@ int main(int argc, char *argv[])
 
 
 }
-
+*/
