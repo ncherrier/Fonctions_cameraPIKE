@@ -1,4 +1,4 @@
-#ifndef MAINPROG_H
+/*#ifndef MAINPROG_H
 #define MAINPROG_H
 
 #include <QApplication>
@@ -21,12 +21,8 @@ class MainProg : public QObject
         MainProg(int, char**); // "Right" constructor, with args of main
         virtual ~MainProg(); // Default destructor
 
-    public slots: // utile ?? ne devrait peut-etre pas etre ici
-        //void openWebcamSettingsWindow(); // TODO: rename (?)
-        //void openCameraSettingsWindow();
-        //void openFramingWindow(); // utile ?
-        //void openSettingsWindow();
-        //void openProcessWindow();
+        void init();
+
 
     //protected:
 
@@ -36,3 +32,4 @@ class MainProg : public QObject
 };
 
 #endif // MAINPROG_H
+*/
