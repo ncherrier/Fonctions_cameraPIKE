@@ -1,3 +1,11 @@
+/* Fenetre pour les reglages :
+ * Choix de l'emplacement de la mise au point,
+ * Retour video (camera indus.) pour la mise au point,
+ * Retour video (webcam) (pour situer l'endroit de la mise au point)
+ * Acces aux reglages de la camera indus. (et de la webcam ?),
+ * Acces au choix de dossier de destination.
+ * */
+
 #ifndef SETTINGSWINDOW_H
 #define SETTINGSWINDOW_H
 
