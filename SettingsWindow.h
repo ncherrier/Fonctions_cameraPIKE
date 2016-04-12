@@ -13,12 +13,18 @@
 #include <QPushButton>
 #include <QWidget>
 
+
 class SettingsWindow : public QWidget
 {
+    Q_OBJECT
 
     public:
         SettingsWindow(); // default constructor
         //virtual ~SettingsWindow(); // default destructor - useless
+
+    public slots:
+        void goToFramingWindow();
+        void startCycle(); // to take the global picture
 
     private:
         QPushButton *upButton;
@@ -29,6 +35,8 @@ class SettingsWindow : public QWidget
         QPushButton *previousButton;
         QPushButton *cameraSettingsButton;
         QPushButton *webcamSettingsButton;
+
+        void goToProcessWindow();
 
 };
 

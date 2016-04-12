@@ -16,20 +16,20 @@ using namespace std;
 
 
 // Slots
-//void MainProg::openWebcamSettingsWindow() {}
-//void MainProg::openCameraSettingsWindow() {}
+//void MainProg::goToWebcamSettingsWindow() {}
+//void MainProg::goToCameraSettingsWindow() {}
 
-//void MainProg::openFramingWindow() {}
+//void MainProg::goToFramingWindow() {}
 
 /*
-void MainProg::openSettingsWindow() {
-    std::cout << "TODO: open next window" << std::endl;
+void MainProg::goToSettingsWindow() {
+    std::cout << "TODO: goTo next window" << std::endl;
     SettingsWindow *set = new SettingsWindow();
     set->show();
     cout << "SettingsWindow shown" << endl;
 }*/
 
-//void MainProg::openProcessWindow() {}
+//void MainProg::goToProcessWindow() {}
 
 // main programm
 int MainProg::mainFunction(){
@@ -41,7 +41,7 @@ int MainProg::mainFunction(){
     cout << "FramingWindow shown" << endl;
 
     TakePictureTest *tak = new TakePictureTest();
-    tak->show();
+    //tak->show();
 
     return app->exec();
 }

@@ -1,7 +1,10 @@
 #ifndef PROCESSWINDOW_H
 #define PROCESSWINDOW_H
 
-class ProcessWindow
+#include <QWidget>
+#include <QApplication>
+
+class ProcessWindow : public QWidget
 {
 public:
     ProcessWindow();
