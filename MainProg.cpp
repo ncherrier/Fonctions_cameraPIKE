@@ -36,9 +36,9 @@ int MainProg::mainFunction(){
     cout << "hello! in MainProg::MainFunction" << endl;
 
     //First window showed: FramingWindow
-    /*FramingWindow *fra = new FramingWindow();
+    FramingWindow *fra = new FramingWindow();
     fra->show();
-    cout << "FramingWindow shown" << endl;*/
+    cout << "FramingWindow shown" << endl;
 
     TakePictureTest *tak = new TakePictureTest();
     tak->show();

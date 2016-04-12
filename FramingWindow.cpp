@@ -47,7 +47,7 @@ FramingWindow::FramingWindow() : QWidget()
     // Signals and slots
 
     QObject::connect(cancelButton, SIGNAL(clicked()), qApp, SLOT(quit()));
-    QObject::connect(nextButton, SIGNAL(clicked()), qApp, SLOT(openSettingsWindow()));
+    QObject::connect(nextButton, SIGNAL(clicked()), this, SLOT(openSettingsWindow()));
 
 
 
