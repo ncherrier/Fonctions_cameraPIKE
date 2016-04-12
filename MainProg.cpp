@@ -15,12 +15,13 @@ using namespace std;
 /*void MainProg::openWebcamSettingsWindow() {}
 
 /* Instanciate all windows */
+
 /*
 WebcamSettingsWindow const * MainProg::web = new WebcamSettingsWindow();
 CameraSettingsWindow const * MainProg::cam = new CameraSettingsWindow();
 FramingWindow const * MainProg::fra = new FramingWindow();
 SettingsWindow const * MainProg::set = new SettingsWindow();
-ProcessWindow const * MainProg::pro = new ProcessWindow();
+ProcessWindow const * MainProg::pro = new ProcessWindow();*/
 
 
 
@@ -39,9 +40,7 @@ void MainProg::openProcessWindow() {}
 
 // main programm
 int MainProg::mainFunction(){
-    cout << "hello!" << endl;
-
-
+    cout << "hello! in MainProg::MainFunction" << endl;
 
 
     //fra->show();
@@ -75,18 +74,14 @@ MainProg::~MainProg(){
     // TODO
 }
 
-// Initialize static attributes
-void MainProg::init(){
-
-}
 
 
 // TODO: Remove after tests (?)
 int main(int argc, char *argv[])
 {
     cout << "hello! in main" << endl;
-    //MainProg mainProg(argc, argv);
-    //mainProg.init();
+    //QApplication const * MainProg::app = new QApplication(argc, argv);
+    MainProg mainProg(argc, argv);;
 
 
 }

@@ -4,7 +4,7 @@
 
 #include "VimbaCPP/Include/VimbaCPP.h"
 
-
+/*
 class CameraPike : public AVT::VmbAPI::Camera
 {
     public:
@@ -44,7 +44,7 @@ class CameraPike : public AVT::VmbAPI::Camera
 
 };
 
-
+*/
 #endif // CAMERAPIKE_H
 
 
