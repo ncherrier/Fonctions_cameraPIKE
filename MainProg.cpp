@@ -7,13 +7,15 @@
 #include "FramingWindow.h"
 #include "ProcessWindow.h"
 #include "MainProg.h"
+#include "TakePictureTest.h" // for tests only
+
 
 using namespace std;
 
 
 
 
-/* Slots */
+// Slots
 //void MainProg::openWebcamSettingsWindow() {}
 //void MainProg::openCameraSettingsWindow() {}
 
@@ -33,14 +35,16 @@ void MainProg::openSettingsWindow() {
 int MainProg::mainFunction(){
     cout << "hello! in MainProg::MainFunction" << endl;
 
-    // First window showed: FramingWindow
-    FramingWindow *fra = new FramingWindow();
+    //First window showed: FramingWindow
+    /*FramingWindow *fra = new FramingWindow();
     fra->show();
+    cout << "FramingWindow shown" << endl;*/
 
-    cout << "FramingWindow shown" << endl;
+    TakePictureTest *tak = new TakePictureTest();
+    tak->show();
 
     return app->exec();
-};
+}
 
 // Constructor (with arguments of main)
 MainProg::MainProg(int argc, char **argv)
@@ -50,7 +54,7 @@ MainProg::MainProg(int argc, char **argv)
     mainFunction();
 
 }
-*/
+
 // Default constructor (no argument)
 /*MainProg::MainProg() {
 

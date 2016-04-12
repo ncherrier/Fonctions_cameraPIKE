@@ -1,3 +1,4 @@
+/*
 //#include "camera.h"
 
 #include <QCoreApplication>
@@ -24,7 +25,7 @@ int main(int argc, char *argv[])
     return a.exec();
 }
 
-/*
+
 CameraPike::CameraPike():
     Camera() {
     AVT::VmbAPI::CameraPtrVector available_cameras;

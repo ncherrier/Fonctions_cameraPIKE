@@ -12,7 +12,8 @@ SOURCES += \
     webcamSettingsWindow.cpp \
     ProcessWindow.cpp \
     MainProg.cpp \
-    camera_settings.cpp
+    camera_settings.cpp \
+    TakePictureTest.cpp
 
 HEADERS += \
     camera.h \
@@ -91,7 +92,8 @@ HEADERS += \
     Vimba_2.0/VimbaCPP/Include/VimbaCPP.h \
     Vimba_2.0/VimbaCPP/Include/VimbaCPPCommon.h \
     Vimba_2.0/VimbaCPP/Include/VimbaSystem.h \
-    Vimba_2.0/VimbaCPP/Include/VimbaSystem.hpp
+    Vimba_2.0/VimbaCPP/Include/VimbaSystem.hpp \
+    TakePictureTest.h
 
 win32:CONFIG(release, debug|release): LIBS += -L$$PWD/Vimba_2.0/VimbaCPP/Lib/Win32 -lVimbaCPP
 #else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/Vimba_2.0/VimbaCPP/Lib/Win32 -lVimbaCPPd

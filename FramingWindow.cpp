@@ -6,7 +6,6 @@
 #include "SettingsWindow.h"
 #include <QApplication>
 #include <QPushButton>
-#include <iostream>
 #include <QGridLayout>
 #include <iostream> // TODO: remove after tests
 
