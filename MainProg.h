@@ -1,4 +1,4 @@
-#ifndef MAINPROG_H
+/*#ifndef MAINPROG_H
 #define MAINPROG_H
 
 #include <QApplication>
@@ -19,7 +19,7 @@ class MainProg : public QObject
         virtual ~MainProg(); // Default destructor
 
         void init();
-
+*/
     /*public slots: // utile ?? ne devrait peut-etre pas etre ici
         void openWebcamSettingsWindow(); // TODO: rename (?)
         void openCameraSettingsWindow();
@@ -27,7 +27,7 @@ class MainProg : public QObject
         void openSettingsWindow();
         void openProcessWindow();*/
 
-
+/*
         static WebcamSettingsWindow *web; // settings for the webcam (= webcam used for framing)
         static CameraSettingsWindow *cam; // settings for the industrial camera
         static FramingWindow *fra;
@@ -51,3 +51,4 @@ MainProg::set = new SettingsWindow();
 MainProg::pro = new ProcessWindow();
 
 #endif // MAINPROG_H
+*/

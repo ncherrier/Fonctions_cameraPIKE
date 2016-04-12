@@ -145,3 +145,4 @@ bool CameraPike::setPixelColorFilter(char *mode){
     }
     return false;
 }
+
