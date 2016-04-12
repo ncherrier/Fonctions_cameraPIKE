@@ -1,3 +1,0 @@
-Image Format Control :
-p. 35
-preciser taille capteur, taille voulue pour l'image, offset

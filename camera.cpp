@@ -1,4 +1,29 @@
-#include "camera.h"
+//#include "camera.h"
+
+#include <QCoreApplication>
+#include "VimbaCPP.h"
+#include <iostream>
+
+using namespace std;
+using namespace AVT::VmbAPI;
+
+
+int main(int argc, char *argv[])
+{
+    QCoreApplication a(argc, argv);
+
+    cout<<"123"<<endl;
+
+    CameraPtrVector cameras;
+
+    VmbInt64_t test = 4;
+    cout << test << endl;
+
+    //VimbaSystem &system = VimbaSystem::GetInstance();
+
+    return a.exec();
+}
+
 /*
 CameraPike::CameraPike():
     Camera() {

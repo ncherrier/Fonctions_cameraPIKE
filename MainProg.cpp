@@ -12,9 +12,9 @@ using namespace std;
 
 */
 /* Slots */
-/*void MainProg::openWebcamSettingsWindow() {}
+//void MainProg::openWebcamSettingsWindow() {}
 
-/* Instanciate all windows */
+//Instanciate all windows
 
 /*
 WebcamSettingsWindow const * MainProg::web = new WebcamSettingsWindow();
@@ -23,7 +23,7 @@ FramingWindow const * MainProg::fra = new FramingWindow();
 SettingsWindow const * MainProg::set = new SettingsWindow();
 ProcessWindow const * MainProg::pro = new ProcessWindow();*/
 
-
+/*
 
 void MainProg::openCameraSettingsWindow() {}
 
@@ -57,7 +57,7 @@ MainProg::MainProg(int argc, char **argv)
     mainFunction();
 
 }
-
+*/
 // Default constructor (no argument)
 /*MainProg::MainProg() {
 
