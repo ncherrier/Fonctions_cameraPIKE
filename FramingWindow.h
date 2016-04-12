@@ -15,7 +15,8 @@ class FramingWindow : public QWidget
         virtual ~FramingWindow();
         // No destructor needed (?)
 
-
+    public slots:
+        void openSettingsWindow();
 
     private:
         QPushButton *webcamSettingsButton;

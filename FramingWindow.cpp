@@ -1,4 +1,6 @@
-/* Fenêtre pour le cadrage (affiche le signal de la webcam ; accès aux réglages de la webcam */
+/* Fenetre pour le cadrage
+ * (affiche le signal de la webcam ;
+ * accès aux reglages de la webcam (?)) */
 
 #include "FramingWindow.h"
 #include "SettingsWindow.h"
@@ -12,12 +14,17 @@ using namespace std;
 
 // Slots
 
-
+void FramingWindow::openSettingsWindow() {
+    std::cout << "TODO: open next window" << std::endl;
+    SettingsWindow *set = new SettingsWindow();
+    set->show();
+    cout << "SettingsWindow shown" << endl;
+}
 
 // Constructors and destructors
 
 // Default Constructor
-FramingWindow::FramingWindow()
+FramingWindow::FramingWindow() : QWidget()
 {
     // Set size and title
 
@@ -41,7 +48,7 @@ FramingWindow::FramingWindow()
     // Signals and slots
 
     QObject::connect(cancelButton, SIGNAL(clicked()), qApp, SLOT(quit()));
-    //QObject::connect(nextButton, SIGNAL(clicked()), this, SLOT(openNextWindow()));
+    QObject::connect(nextButton, SIGNAL(clicked()), qApp, SLOT(openSettingsWindow()));
 
 
 
