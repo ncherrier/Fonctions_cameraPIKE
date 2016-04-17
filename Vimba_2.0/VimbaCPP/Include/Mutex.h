@@ -29,7 +29,7 @@
 #ifndef AVT_VMBAPI_MUTEX
 #define AVT_VMBAPI_MUTEX
 
-#include <VimbaCPP/Include/VimbaCPPCommon.h>
+#include <Vimba_2.0/VimbaCPP/Include/VimbaCPPCommon.h>
 
 #ifdef _WIN32
     #include <windows.h>

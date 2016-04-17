@@ -28,9 +28,9 @@
 #ifndef AVT_VMBAPI_INTERFACE_H
 #define AVT_VMBAPI_INTERFACE_H
 
-#include <VimbaC/Include/VimbaC.h>
-#include <VimbaCPP/Include/VimbaCPPCommon.h>
-#include <VimbaCPP/Include/FeatureContainer.h>
+#include <Vimba_2.0/VimbaC/Include/VimbaC.h>
+#include <Vimba_2.0/VimbaCPP/Include/VimbaCPPCommon.h>
+#include <Vimba_2.0/VimbaCPP/Include/FeatureContainer.h>
 #include <vector>
 
 namespace AVT {
@@ -160,7 +160,7 @@ class Interface : public FeatureContainer
     IMEXPORT VmbErrorType GetSerialNumber( char * const pSerial, VmbUint32_t &length ) const;
 };
 
-#include <VimbaCPP/Include/Interface.hpp>
+#include <Vimba_2.0/VimbaCPP/Include/Interface.hpp>
 
 }} // namespace AVT::VmbAPI
 

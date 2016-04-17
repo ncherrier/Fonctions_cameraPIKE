@@ -1,5 +1,5 @@
-/*
-//#include "camera.h"
+
+#include "camera.h"
 
 #include <QCoreApplication>
 #include "VimbaCPP.h"
@@ -26,22 +26,24 @@ int main(int argc, char *argv[])
 }
 
 
-CameraPike::CameraPike():
-    Camera() {
-    AVT::VmbAPI::CameraPtrVector available_cameras;
+CameraPike::CameraPike(): Camera() {
+    AVT::VmbAPI::CameraPtrVector available_cameras; // Suffit pour appeler le constructeur ? Peut-etre essayer la ligne suivante :
+    // AVT::VmbAPI::CameraPtrVector available_cameras = new AVT::VmbAPI::CameraPtrVector();
+    // (En vrai je ne sais pas trop comment faire avec ce vecteur de bidules qui sont peut-etre des pointeurs)
     AVT::VmbAPI::VimbaSystem &system = AVT::VmbAPI::VimbaSystem :: GetInstance ();
     if ( VmbErrorSuccess == system.Startup () ) {
       if ( VmbErrorSuccess == system.GetCameras( available_cameras ) ) {
-          camera = available_cameras[0];
+          camera = available_cameras[0]; // "camera" est censee etre un attribut de CameraPike ? en tous cas apparemment ce n'est pas reconnu...
       }
     }
     this->AVT::VmbAPI::Camera::Open( VmbAccessModeFull );
 }
 
-CameraPike::~CameraPike():
-    ~Camera(){
+CameraPike::~CameraPike() {
+//CameraPike::~CameraPike(): ~Camera(){
     this->AVT::VmbAPI::Camera::Close();
 }
+// Bricolage, je ne sais pas si ca tiendra
 
 int CameraPike::getExposureTime(){
     AVT::VmbAPI::FeaturePtr feature;
@@ -118,6 +120,8 @@ AVT::VmbAPI::IFrameObserverPtr CameraPike::start_getting_images(){
     if(VmbErrorSuccess == this->StartContinuousImageAcquisition(bufferCount,frameObserver)) {
         return frameObserver;
     }
+    // Remarque : ne faut-il pas lever une exception si la condition n'est pas verifiee ?
+    // sinon, returns void -> bizarroide, va faire des erreurs
 }
 
 bool CameraPike::stop_getting_images(){
@@ -127,8 +131,8 @@ bool CameraPike::stop_getting_images(){
 void CameraPike::get_image(AVT::VmbAPI::IFrameObserverPtr frameObserver){
     AVT::VmbAPI::FramePtr frame;
     frameObserver->FrameReceived(frame);
-    return frame;
+    return;
+    //return frame;
     // TODO : affichage de l'image en question (actualiser)
 }
 
-*/

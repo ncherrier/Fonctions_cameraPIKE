@@ -28,9 +28,9 @@
 #ifndef AVT_VMBAPI_IINTERFACELISTOBSERVER_H
 #define AVT_VMBAPI_IINTERFACELISTOBSERVER_H
 
-#include <VimbaCPP/Include/VimbaCPPCommon.h>
-#include <VimbaCPP/Include/SharedPointerDefines.h>
-#include <VimbaCPP/Include/Interface.h>
+#include <Vimba_2.0/VimbaCPP/Include/VimbaCPPCommon.h>
+#include <Vimba_2.0/VimbaCPP/Include/SharedPointerDefines.h>
+#include <Vimba_2.0/VimbaCPP/Include/Interface.h>
 #include <vector>
 
 namespace AVT {

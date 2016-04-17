@@ -25,15 +25,15 @@
 
 =============================================================================*/
 
-#include <VimbaCPP/Include/VimbaCPPCommon.h>
+#include <Vimba_2.0/VimbaCPP/Include/VimbaCPPCommon.h>
 
-#include <VimbaCPP/Include/Camera.h>
-#include <VimbaCPP/Include/Interface.h>
-#include <VimbaCPP/Include/VimbaSystem.h>
-#include <VimbaCPP/Include/FeatureContainer.h>
-#include <VimbaCPP/Include/ICameraFactory.h>
-#include <VimbaCPP/Include/ICameraListObserver.h>
-#include <VimbaCPP/Include/IInterfaceListObserver.h>
-#include <VimbaCPP/Include/IFeatureObserver.h>
-#include <VimbaCPP/Include/IFrameObserver.h>
-#include <VimbaCPP/Include/Frame.h>
+#include <Vimba_2.0/VimbaCPP/Include/Camera.h>
+#include <Vimba_2.0/VimbaCPP/Include/Interface.h>
+#include <Vimba_2.0/VimbaCPP/Include/VimbaSystem.h>
+#include <Vimba_2.0/VimbaCPP/Include/FeatureContainer.h>
+#include <Vimba_2.0/VimbaCPP/Include/ICameraFactory.h>
+#include <Vimba_2.0/VimbaCPP/Include/ICameraListObserver.h>
+#include <Vimba_2.0/VimbaCPP/Include/IInterfaceListObserver.h>
+#include <Vimba_2.0/VimbaCPP/Include/IFeatureObserver.h>
+#include <Vimba_2.0/VimbaCPP/Include/IFrameObserver.h>
+#include <Vimba_2.0/VimbaCPP/Include/Frame.h>

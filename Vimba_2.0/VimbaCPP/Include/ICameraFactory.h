@@ -28,10 +28,10 @@
 #ifndef AVT_VMBAPI_ICAMERAFACTORY_H
 #define AVT_VMBAPI_ICAMERAFACTORY_H
 
-#include <VimbaC/Include/VimbaC.h>
-#include <VimbaCPP/Include/VimbaCPPCommon.h>
-#include <VimbaCPP/Include/SharedPointerDefines.h>
-#include <VimbaCPP/Include/Camera.h>
+#include <Vimba_2.0/VimbaC/Include/VimbaC.h>
+#include <Vimba_2.0/VimbaCPP/Include/VimbaCPPCommon.h>
+#include <Vimba_2.0/VimbaCPP/Include/SharedPointerDefines.h>
+#include <Vimba_2.0/VimbaCPP/Include/Camera.h>
 
 namespace AVT {
 namespace VmbAPI {

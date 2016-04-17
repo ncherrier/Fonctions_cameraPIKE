@@ -28,9 +28,9 @@
 #ifndef AVT_VMBAPI_IFRAMEOBSERVER_H
 #define AVT_VMBAPI_IFRAMEOBSERVER_H
 
-#include <VimbaCPP/Include/VimbaCPPCommon.h>
-#include <VimbaCPP/Include/SharedPointerDefines.h>
-#include <VimbaCPP/Include/Frame.h>
+#include <Vimba_2.0/VimbaCPP/Include/VimbaCPPCommon.h>
+#include <Vimba_2.0/VimbaCPP/Include/SharedPointerDefines.h>
+#include <Vimba_2.0/VimbaCPP/Include/Frame.h>
 
 namespace AVT {
 namespace VmbAPI {

@@ -30,7 +30,7 @@
 #ifndef AVT_VMBAPI_SHAREDPOINTER_H
 #define AVT_VMBAPI_SHAREDPOINTER_H
 
-#include <VimbaCPP/Include/Mutex.h>
+#include <Vimba_2.0/VimbaCPP/Include/Mutex.h>
 
 namespace AVT {
 namespace VmbAPI {
@@ -137,6 +137,6 @@ namespace VmbAPI {
 
 }} //namespace AVT::VmbAPI
 
-#include <VimbaCPP/Include/SharedPointer_impl.h>
+#include <Vimba_2.0/VimbaCPP/Include/SharedPointer_impl.h>
 
 #endif //AVT_VMBAPI_SHAREDPOINTER_H

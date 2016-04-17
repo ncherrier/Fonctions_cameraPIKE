@@ -34,11 +34,11 @@
 #include <vector>
 #include <map>
 
-#include <VimbaC/Include/VimbaC.h>
-#include <VimbaCPP/Include/VimbaCPPCommon.h>
-#include <VimbaCPP/Include/SharedPointerDefines.h>
-#include <VimbaCPP/Include/IFeatureObserver.h>
-#include <VimbaCPP/Include/EnumEntry.h>
+#include <Vimba_2.0/VimbaC/Include/VimbaC.h>
+#include <Vimba_2.0/VimbaCPP/Include/VimbaCPPCommon.h>
+#include <Vimba_2.0/VimbaCPP/Include/SharedPointerDefines.h>
+#include <Vimba_2.0/VimbaCPP/Include/IFeatureObserver.h>
+#include <Vimba_2.0/VimbaCPP/Include/EnumEntry.h>
 
 namespace AVT {
 namespace VmbAPI {
@@ -605,7 +605,7 @@ class Feature
     IMEXPORT    VmbErrorType GetSelectedFeatures( FeaturePtr *pSelectedFeatures, VmbUint32_t &nSize );
 };
 
-#include <VimbaCPP/Include/Feature.hpp>
+#include <Vimba_2.0/VimbaCPP/Include/Feature.hpp>
 
 }} // namespace AVT::VmbAPI
 

@@ -31,13 +31,13 @@
 #include <vector>
 #include <string>
 
-#include <VimbaC/Include/VimbaC.h>
-#include <VimbaCPP/Include/VimbaCPPCommon.h>
-#include <VimbaCPP/Include/IRegisterDevice.h>
-#include <VimbaCPP/Include/FeatureContainer.h>
-#include <VimbaCPP/Include/Frame.h>
-#include <VimbaCPP/Include/IFrameObserver.h>
-#include <VimbaCPP/Include/SharedPointerDefines.h>
+#include <Vimba_2.0/VimbaC/Include/VimbaC.h>
+#include <Vimba_2.0/VimbaCPP/Include/VimbaCPPCommon.h>
+#include <Vimba_2.0/VimbaCPP/Include/IRegisterDevice.h>
+#include <Vimba_2.0/VimbaCPP/Include/FeatureContainer.h>
+#include <Vimba_2.0/VimbaCPP/Include/Frame.h>
+#include <Vimba_2.0/VimbaCPP/Include/IFrameObserver.h>
+#include <Vimba_2.0/VimbaCPP/Include/SharedPointerDefines.h>
 
 namespace AVT {
 namespace VmbAPI {
@@ -593,10 +593,11 @@ class Camera : public FeatureContainer, public IRegisterDevice
     //
     IMEXPORT void LoadSaveSettingsSetup( VmbFeaturePersist_t persistType, VmbUint32_t maxIterations, VmbUint32_t loggingLevel );
 
-  private:
+  protected:
     // Default ctor
     Camera();
 
+  private:    
     // Copy ctor
     Camera ( const Camera& );
 
@@ -625,7 +626,7 @@ class Camera : public FeatureContainer, public IRegisterDevice
     VmbUint32_t m_loggingLevel;
 };
 
-#include <VimbaCPP/Include/Camera.hpp>
+#include <Vimba_2.0/VimbaCPP/Include/Camera.hpp>
 
 }} // namespace AVT::VmbAPI
 

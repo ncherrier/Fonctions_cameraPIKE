@@ -28,9 +28,9 @@
 #ifndef AVT_VMBAPI_ANCILLARYDATA_H
 #define AVT_VMBAPI_ANCILLARYDATA_H
 
-#include <VimbaC/Include/VmbCommonTypes.h>
-#include <VimbaCPP/Include/VimbaCPPCommon.h>
-#include <VimbaCPP/Include/FeatureContainer.h>
+#include <Vimba_2.0/VimbaC/Include/VmbCommonTypes.h>
+#include <Vimba_2.0/VimbaCPP/Include/VimbaCPPCommon.h>
+#include <Vimba_2.0/VimbaCPP/Include/FeatureContainer.h>
 
 namespace AVT {
 namespace VmbAPI {

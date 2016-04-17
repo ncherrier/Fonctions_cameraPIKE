@@ -95,15 +95,7 @@ HEADERS += \
     Vimba_2.0/VimbaCPP/Include/VimbaSystem.hpp \
     TakePictureTest.h
 
-win32:CONFIG(release, debug|release): LIBS += -L$$PWD/Vimba_2.0/VimbaCPP/Lib/Win32 -lVimbaCPP
-#else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/Vimba_2.0/VimbaCPP/Lib/Win32 -lVimbaCPPd
-
-INCLUDEPATH += $$PWD/Vimba_2.0/VimbaCPP/Include
-DEPENDPATH += $$PWD/Vimba_2.0/VimbaCPP/Include
-
-win32:!win32-g++:CONFIG(release, debug|release): PRE_TARGETDEPS += $$PWD/Vimba_2.0/VimbaCPP/Lib/Win32/VimbaCPP.lib
-#else:win32:!win32-g++:CONFIG(debug, debug|release): PRE_TARGETDEPS += $$PWD/Vimba_2.0/VimbaCPP/Lib/Win32/VimbaCPPd.lib
-
+### VimbaC ###
 win32:CONFIG(release, debug|release): LIBS += -L$$PWD/Vimba_2.0/VimbaC/Lib/Win32 -lVimbaC
 #else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/Vimba_2.0/VimbaC/Lib/Win32 -lVimbaCd
 
@@ -112,4 +104,14 @@ DEPENDPATH += $$PWD/Vimba_2.0/VimbaC/Include
 
 win32:!win32-g++:CONFIG(release, debug|release): PRE_TARGETDEPS += $$PWD/Vimba_2.0/VimbaC/Lib/Win32/VimbaC.lib
 #else:win32:!win32-g++:CONFIG(debug, debug|release): PRE_TARGETDEPS += $$PWD/Vimba_2.0/VimbaC/Lib/Win32/VimbaCd.lib
+
+### VimbaCPP ###
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/Vimba_2.0/VimbaCPP/Lib/Win32 -lVimbaCPP
+#else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/Vimba_2.0/VimbaCPP/Lib/Win32 -lVimbaCPPd
+
+INCLUDEPATH += $$PWD/Vimba_2.0/VimbaCPP/Include
+DEPENDPATH += $$PWD/Vimba_2.0/VimbaCPP/Include
+
+win32:!win32-g++:CONFIG(release, debug|release): PRE_TARGETDEPS += $$PWD/Vimba_2.0/VimbaCPP/Lib/Win32/VimbaCPP.lib
+#else:win32:!win32-g++:CONFIG(debug, debug|release): PRE_TARGETDEPS += $$PWD/Vimba_2.0/VimbaCPP/Lib/Win32/VimbaCPPd.lib
 

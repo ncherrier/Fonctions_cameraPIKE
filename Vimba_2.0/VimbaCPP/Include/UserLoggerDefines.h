@@ -34,7 +34,7 @@
 
 // Add all your required logger implementation headers here.
 // HINT: #include <VimbaCPP/Include/FileLogger.h> is an example and can be safely removed.
-#include <VimbaCPP/Include/FileLogger.h>
+#include <Vimba_2.0/VimbaCPP/Include/FileLogger.h>
 
 namespace AVT {
 namespace VmbAPI {

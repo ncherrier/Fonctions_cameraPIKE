@@ -29,9 +29,9 @@
 #ifndef AVT_VMBAPI_BASICLOCKABLE
 #define AVT_VMBAPI_BASICLOCKABLE
 
-#include <VimbaCPP/Include/VimbaCPPCommon.h>
-#include <VimbaCPP/Include/SharedPointerDefines.h>
-#include <VimbaCPP/Include/Mutex.h>
+#include <Vimba_2.0/VimbaCPP/Include/VimbaCPPCommon.h>
+#include <Vimba_2.0/VimbaCPP/Include/SharedPointerDefines.h>
+#include <Vimba_2.0/VimbaCPP/Include/Mutex.h>
 
 namespace AVT {
 namespace VmbAPI {

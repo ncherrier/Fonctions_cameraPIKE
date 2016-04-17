@@ -35,9 +35,9 @@
 
 #include <string>
 
-#include <VimbaC/Include/VimbaC.h>
-#include <VimbaCPP/Include/VimbaCPPCommon.h>
-#include <VimbaCPP/Include/SharedPointerDefines.h>
+#include <Vimba_2.0/VimbaC/Include/VimbaC.h>
+#include <Vimba_2.0/VimbaCPP/Include/VimbaCPPCommon.h>
+#include <Vimba_2.0/VimbaCPP/Include/SharedPointerDefines.h>
 
 namespace AVT {
 namespace VmbAPI {
@@ -184,7 +184,7 @@ class EnumEntry
 
 };
 
-#include <VimbaCPP/Include/EnumEntry.hpp>
+#include <Vimba_2.0/VimbaCPP/Include/EnumEntry.hpp>
 
 }} // namespace AVT::VmbAPI
 
