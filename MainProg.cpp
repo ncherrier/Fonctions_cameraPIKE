@@ -61,7 +61,7 @@ MainProg::MainProg(int argc, char **argv)
 }
 
 // Default constructor (no argument)
-/*MainProg::MainProg() {
+MainProg::MainProg() {
 
     char * argv = new char[1]();
     app = new QApplication(0, *argv);
