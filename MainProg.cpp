@@ -28,7 +28,7 @@ void MainProg::openSettingsWindow() {
 }*/
 
 //void MainProg::openProcessWindow() {}
-
+/*
 // main programm
 int MainProg::mainFunction(){
     cout << "hello! in MainProg::MainFunction" << endl;
@@ -62,7 +62,7 @@ MainProg::MainProg(int argc, char **argv)
 // TODO: uncomment, regler le bug pour avoir une belle syntaxe. inutile en soi
 
 // Default destructor
-
+/*
 MainProg::~MainProg(){
 
 }
@@ -78,3 +78,4 @@ int main(int argc, char *argv[])
 
 }
 
+*/

@@ -35,7 +35,7 @@
 namespace AVT {
 namespace VmbAPI {
 
-class IFrameObserver 
+class IMEXPORT IFrameObserver
 {
   public:
     //
@@ -48,20 +48,20 @@ class IFrameObserver
     //
     // [in]     const FramePtr      pFrame                  The frame that was received
     //
-    IMEXPORT virtual void FrameReceived( const FramePtr pFrame ) = 0;
+    virtual void FrameReceived( const FramePtr pFrame ) = 0;
 
     //
     // Method:      IFrameObserver destructor
     //
     // Purpose:     Destroys an instance of class IFrameObserver
     //
-    IMEXPORT virtual ~IFrameObserver() {}
+    virtual ~IFrameObserver() {}
 
   protected:
     CameraPtr m_pCamera;
-    IMEXPORT IFrameObserver( CameraPtr pCamera ) : m_pCamera( pCamera ) {}
+    IFrameObserver( CameraPtr pCamera ) : m_pCamera( pCamera ) {}
 
-    IMEXPORT IFrameObserver( IFrameObserver& ) { /* No copy ctor */ }
+    IFrameObserver( IFrameObserver& ) { /* No copy ctor */ }
 
   private:
     IFrameObserver() { /* No default ctor */ }

@@ -16,10 +16,14 @@ int main(int argc, char *argv[])
 
     CameraPtrVector cameras;
 
-    VmbInt64_t test = 4;
+    VmbUint32_t test = 4;
     cout << test << endl;
 
-    //VimbaSystem &system = VimbaSystem::GetInstance();
+    CameraPtr cam = cameras[0];
+    FramePtr frame;
+    cam->AcquireSingleImage(frame,test);
+
+    VimbaSystem &system = VimbaSystem::GetInstance();
 
     return a.exec();
 }

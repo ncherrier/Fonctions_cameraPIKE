@@ -36,7 +36,7 @@
 namespace AVT {
 namespace VmbAPI {
 
-class ICameraFactory 
+class IMEXPORT ICameraFactory
 {
   public:
     //
@@ -60,7 +60,7 @@ class ICameraFactory
     //            "000f31000001", a plain serial number: "1234567890", or the device ID 
     //            of the underlying transport layer.
     //
-    IMEXPORT virtual CameraPtr CreateCamera(    const char *pCameraID,
+    virtual CameraPtr CreateCamera(    const char *pCameraID,
                                                 const char *pCameraName,
                                                 const char *pCameraModel,
                                                 const char *pCameraSerialNumber,
@@ -75,7 +75,7 @@ class ICameraFactory
     //
     // Purpose:     Destroys an instance of class Camera
     //
-    IMEXPORT virtual ~ICameraFactory() {}
+    virtual ~ICameraFactory() {}
 
 };
 

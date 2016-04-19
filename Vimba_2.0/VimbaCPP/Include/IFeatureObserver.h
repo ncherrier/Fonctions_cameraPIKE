@@ -36,7 +36,7 @@
 namespace AVT {
 namespace VmbAPI {
 
-class IFeatureObserver 
+class IMEXPORT IFeatureObserver
 {
   public:
     //
@@ -49,18 +49,18 @@ class IFeatureObserver
     //
     // [in]     const FeaturePtr&      pFeature          The frame that has changed
     //
-    IMEXPORT virtual void FeatureChanged( const FeaturePtr &pFeature ) = 0;
+    virtual void FeatureChanged( const FeaturePtr &pFeature ) = 0;
 
     //
     // Method:      IFeatureObserver destructor
     //
     // Purpose:     Destroys an instance of class IFeatureObserver
     //
-    IMEXPORT virtual ~IFeatureObserver() {}
+    virtual ~IFeatureObserver() {}
 
   protected:
-    IMEXPORT IFeatureObserver() {}
-    IMEXPORT IFeatureObserver( const IFeatureObserver& ) { /* No copy ctor */ }
+    IFeatureObserver() {}
+    IFeatureObserver( const IFeatureObserver& ) { /* No copy ctor */ }
 };
 typedef std::vector<IFeatureObserverPtr> IFeatureObserverPtrVector;
 
