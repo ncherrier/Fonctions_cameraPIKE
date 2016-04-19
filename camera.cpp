@@ -6,7 +6,6 @@
 #include <iostream>
 
 using namespace std;
-using namespace AVT::VmbAPI;
 
 
 int main(int argc, char *argv[])
@@ -15,24 +14,24 @@ int main(int argc, char *argv[])
 
     cout<<"123"<<endl;
 
-    CameraPtrVector cameras;
+    AVT::VmbAPI::CameraPtrVector cameras;
 
     VmbUint32_t test = 4;
     cout << test << endl;
 
-    CameraPtr cam = cameras[0];
-    FramePtr frame;
+    AVT::VmbAPI::CameraPtr cam = cameras[0];
+    AVT::VmbAPI::FramePtr frame;
     cam->AcquireSingleImage(frame,test);
 
-    VimbaSystem &system = VimbaSystem::GetInstance();
+    AVT::VmbAPI::VimbaSystem &system = AVT::VmbAPI::VimbaSystem::GetInstance();
 
     return a.exec();
 }
 
 
-CameraPike::CameraPike(): Camera() {
-    AVT::VmbAPI::CameraPtrVector available_cameras; // Suffit pour appeler le constructeur ? Peut-etre essayer la ligne suivante :
-    // AVT::VmbAPI::CameraPtrVector available_cameras = new AVT::VmbAPI::CameraPtrVector();
+CameraPike::CameraPike(): AVT::VmbAPI::Camera() {
+    AVT::VmbAPI::CameraPtrVector available_cameras;// = new AVT::VmbAPI::CameraPtrVector();
+    AVT::VmbAPI::CameraPtr camera;
     // (En vrai je ne sais pas trop comment faire avec ce vecteur de bidules qui sont peut-etre des pointeurs)
     AVT::VmbAPI::VimbaSystem &system = AVT::VmbAPI::VimbaSystem :: GetInstance ();
     if ( VmbErrorSuccess == system.Startup () ) {

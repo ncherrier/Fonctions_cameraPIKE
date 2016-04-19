@@ -23,7 +23,6 @@ HEADERS += \
     cameraSettingsWindow.h \
     ProcessWindow.h \
     MainProg.h \
-<<<<<<< HEAD
 #    Vimba_2.0/VimbaCPP/Include/AncillaryData.h \
 #    Vimba_2.0/VimbaCPP/Include/BasicLockable.h \
 #    Vimba_2.0/VimbaCPP/Include/Camera.h \
@@ -57,7 +56,6 @@ HEADERS += \
 #    Vimba_2.0/VimbaCPP/Include/VimbaSystem.hpp \
 #    Vimba_2.0/VimbaC/Include/VimbaC.h \
 #    Vimba_2.0/VimbaC/Include/VmbCommonTypes.h
-
     Vimba_2.0/VimbaCPP/Include/AncillaryData.h \
     Vimba_2.0/VimbaCPP/Include/BasicLockable.h \
     Vimba_2.0/VimbaCPP/Include/Camera.h \
