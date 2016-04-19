@@ -1,5 +1,5 @@
 
-#include "camera.h"
+#include "IndustrialCamera/camera.h"
 
 #include <QCoreApplication>
 #include "VimbaCPP.h"
@@ -7,7 +7,7 @@
 
 using namespace std;
 
-
+/*
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
@@ -138,4 +138,4 @@ void CameraPike::get_image(AVT::VmbAPI::IFrameObserverPtr frameObserver){
     //return frame;
     // TODO : affichage de l'image en question (actualiser)
 }
-
+*/

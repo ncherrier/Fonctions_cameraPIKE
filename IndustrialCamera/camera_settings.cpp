@@ -1,6 +1,6 @@
 #include <string>
 
-#include "camera.h"
+#include "IndustrialCamera/camera.h"
 /*
 std::string CameraPike::getName(){
     AVT::VmbAPI::FeaturePtr feature;
@@ -145,7 +145,4 @@ bool CameraPike::setPixelColorFilter(char *mode){
     }
     return false;
 }
-<<<<<<< HEAD
-
-=======
 */

@@ -1,4 +1,4 @@
-#include "webcamSettingsWindow.h"
+#include "GraphicalUserInterface/webcamSettingsWindow.h"
 
 WebcamSettingsWindow::WebcamSettingsWindow()
 {

@@ -10,9 +10,10 @@
 #include <QPushButton>
 #include <iostream>
 #include <QGridLayout>
-#include "FramingWindow.h" // TODO: remove after tests
-#include "SettingsWindow.h"
-#include "ProcessWindow.h"
+#include "GraphicalUserInterface/FramingWindow.h" // TODO: remove after tests
+#include "GraphicalUserInterface/SettingsWindow.h"
+#include "GraphicalUserInterface/ProcessWindow.h"
+#include "MainProg.h"
 
 using namespace std;
 
@@ -32,6 +33,7 @@ void SettingsWindow::goToFramingWindow() {
 void SettingsWindow::startCycle() {
     // TODO !!
     goToProcessWindow();
+    MainProg::startCycle();
 }
 
 // Constructors and destructors

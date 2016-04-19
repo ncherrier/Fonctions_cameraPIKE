@@ -1,4 +1,4 @@
-#include "ProcessWindow.h"
+#include "GraphicalUserInterface/ProcessWindow.h"
 
 ProcessWindow::ProcessWindow()
 {

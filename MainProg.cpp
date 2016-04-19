@@ -1,11 +1,11 @@
 #include <QApplication>
 #include <QPushButton>
 #include <iostream>
-#include "cameraSettingsWindow.h"
-#include "webcamSettingsWindow.h"
-#include "SettingsWindow.h"
-#include "FramingWindow.h"
-#include "ProcessWindow.h"
+#include "GraphicalUserInterface/cameraSettingsWindow.h"
+#include "GraphicalUserInterface/webcamSettingsWindow.h"
+#include "GraphicalUserInterface/SettingsWindow.h"
+#include "GraphicalUserInterface/FramingWindow.h"
+#include "GraphicalUserInterface/ProcessWindow.h"
 #include "MainProg.h"
 #include "TakePictureTest.h" // for tests only
 
@@ -13,40 +13,35 @@
 using namespace std;
 
 
+// Algorithm to take a global picture
+// will be called by the User Interface
+// take subpictures and communcate with Electronics to move the Industrial Camera
+// returns true if the process was executed normally
+bool MainProg::startCycle() {
+    // for tests:
+    cout << "hello! in MainProg::startCycle()" << endl;
 
 
-// Slots
-//void MainProg::goToWebcamSettingsWindow() {}
-//void MainProg::goToCameraSettingsWindow() {}
 
-//void MainProg::goToFramingWindow() {}
-
-/*
-void MainProg::goToSettingsWindow() {
-    std::cout << "TODO: goTo next window" << std::endl;
-    SettingsWindow *set = new SettingsWindow();
-    set->show();
-    cout << "SettingsWindow shown" << endl;
-}*/
-
-
-//void MainProg::openProcessWindow() {}
-/*
-
-//void MainProg::goToProcessWindow() {}
-
+    return true;
+}
 
 // main programm
 int MainProg::mainFunction(){
+
+    //*****************For tests only*****************
     cout << "hello! in MainProg::MainFunction" << endl;
+
+    //TakePictureTest *tak = new TakePictureTest();
+    //tak->show();
+    //************************************************
+
 
     //First window showed: FramingWindow
     FramingWindow *fra = new FramingWindow();
     fra->show();
     cout << "FramingWindow shown" << endl;
 
-    TakePictureTest *tak = new TakePictureTest();
-    //tak->show();
 
     return app->exec();
 }
@@ -60,18 +55,19 @@ MainProg::MainProg(int argc, char **argv)
 
 }
 
+
 // Default constructor (no argument)
-MainProg::MainProg() {
+//MainProg::MainProg() {
 
-    char * argv = new char[1]();
-    app = new QApplication(0, *argv);
-    mainFunction();
+//    char * argv = new char[1]();
+//    app = new QApplication(0, *argv);
+//    mainFunction();
 
-}*/
+//}
 // TODO: uncomment, regler le bug pour avoir une belle syntaxe. inutile en soi
 
 // Default destructor
-/*
+
 MainProg::~MainProg(){
 
 }
@@ -87,4 +83,4 @@ int main(int argc, char *argv[])
 
 }
 
-*/
+

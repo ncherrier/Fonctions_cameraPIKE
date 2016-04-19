@@ -1,10 +1,13 @@
 #ifndef CAMERASETTINGSWINDOW_H
 #define CAMERASETTINGSWINDOW_H
 
-class CameraSettingsWindow
+#include <QWidget>
+#include <QApplication>
+
+class CameraSettingsWindow : public QWidget
 {
-public:
-    CameraSettingsWindow();
+    public:
+        CameraSettingsWindow();
 };
 
 #endif // CAMERASETTINGSWINDOW_H

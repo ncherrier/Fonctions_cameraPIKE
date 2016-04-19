@@ -2,8 +2,8 @@
  * (affiche le signal de la webcam ;
  * accès aux reglages de la webcam (?)) */
 
-#include "FramingWindow.h"
-#include "SettingsWindow.h"
+#include "GraphicalUserInterface/FramingWindow.h"
+#include "GraphicalUserInterface/SettingsWindow.h"
 #include <QApplication>
 #include <QPushButton>
 #include <QGridLayout>

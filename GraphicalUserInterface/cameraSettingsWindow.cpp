@@ -1,4 +1,4 @@
-#include "cameraSettingsWindow.h"
+#include "GraphicalUserInterface/cameraSettingsWindow.h"
 
 // Default constructor
 CameraSettingsWindow::CameraSettingsWindow()

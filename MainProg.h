@@ -2,29 +2,27 @@
 #define MAINPROG_H
 
 #include <QApplication>
-#include "cameraSettingsWindow.h"
-#include "webcamSettingsWindow.h"
-#include "FramingWindow.h"
-#include "SettingsWindow.h"
-#include "ProcessWindow.h"
+#include "GraphicalUserInterface/cameraSettingsWindow.h"
+#include "GraphicalUserInterface/webcamSettingsWindow.h"
+#include "GraphicalUserInterface/FramingWindow.h"
+#include "GraphicalUserInterface/SettingsWindow.h"
+#include "GraphicalUserInterface/ProcessWindow.h"
 
 class MainProg : public QObject
 {
-    Q_OBJECT // To be able to define new slots (interactions with user)
-    // /!\ Build -> run QMAKE before building and running
 
     public:
-        //static Windows const * windows;
         QApplication *app;
 
+        // Constructors and destructor
         //MainProg(); // Default constructor, not to be used in normal conditions
         MainProg(int, char**); // "Right" constructor, with args of main
         virtual ~MainProg(); // Default destructor
 
-        void init();
-
-
-    //protected:
+        // To take a global picture
+        static bool startCycle();
+        // will be called by the User Interface
+        // returns true if the process was executed normally
 
     private:
         int mainFunction();

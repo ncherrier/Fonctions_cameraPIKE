@@ -1,7 +1,10 @@
 #ifndef WEBCAMSETTINGSWINDOW_H
 #define WEBCAMSETTINGSWINDOW_H
 
-class WebcamSettingsWindow
+#include <QApplication>
+#include <QWidget>
+
+class WebcamSettingsWindow : public QWidget
 {
 public:
     WebcamSettingsWindow();
