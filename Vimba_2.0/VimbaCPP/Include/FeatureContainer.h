@@ -28,11 +28,11 @@
 #ifndef AVT_VMBAPI_FEATURECONTAINER_H
 #define AVT_VMBAPI_FEATURECONTAINER_H
 
-#include <VimbaC/Include/VmbCommonTypes.h>
-#include <VimbaCPP/Include/VimbaCPPCommon.h>
-#include <VimbaCPP/Include/BasicLockable.h>
-#include <VimbaCPP/Include/SharedPointerDefines.h>
-#include <VimbaCPP/Include/Feature.h>
+#include <Vimba_2.0/VimbaC/Include/VmbCommonTypes.h>
+#include <Vimba_2.0/VimbaCPP/Include/VimbaCPPCommon.h>
+#include <Vimba_2.0/VimbaCPP/Include/BasicLockable.h>
+#include <Vimba_2.0/VimbaCPP/Include/SharedPointerDefines.h>
+#include <Vimba_2.0/VimbaCPP/Include/Feature.h>
 
 namespace AVT {
 namespace VmbAPI {
@@ -116,7 +116,7 @@ class FeatureContainer : public virtual BasicLockable
     FeatureContainer& operator=( const FeatureContainer& );
 };
 
-#include <VimbaCPP/Include/FeatureContainer.hpp>
+#include <Vimba_2.0/VimbaCPP/Include/FeatureContainer.hpp>
 
 }} // namespace AVT::VmbAPI
 

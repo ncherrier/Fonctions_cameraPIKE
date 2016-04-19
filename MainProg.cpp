@@ -7,40 +7,49 @@
 #include "FramingWindow.h"
 #include "ProcessWindow.h"
 #include "MainProg.h"
+#include "TakePictureTest.h" // for tests only
+
 
 using namespace std;
 
 
 
 
-/* Slots */
-//void MainProg::openWebcamSettingsWindow() {}
-//void MainProg::openCameraSettingsWindow() {}
+// Slots
+//void MainProg::goToWebcamSettingsWindow() {}
+//void MainProg::goToCameraSettingsWindow() {}
 
-//void MainProg::openFramingWindow() {}
+//void MainProg::goToFramingWindow() {}
 
 /*
-void MainProg::openSettingsWindow() {
-    std::cout << "TODO: open next window" << std::endl;
+void MainProg::goToSettingsWindow() {
+    std::cout << "TODO: goTo next window" << std::endl;
     SettingsWindow *set = new SettingsWindow();
     set->show();
     cout << "SettingsWindow shown" << endl;
 }*/
 
+
 //void MainProg::openProcessWindow() {}
 /*
+
+//void MainProg::goToProcessWindow() {}
+
+
 // main programm
 int MainProg::mainFunction(){
     cout << "hello! in MainProg::MainFunction" << endl;
 
-    // First window showed: FramingWindow
+    //First window showed: FramingWindow
     FramingWindow *fra = new FramingWindow();
     fra->show();
-
     cout << "FramingWindow shown" << endl;
 
+    TakePictureTest *tak = new TakePictureTest();
+    //tak->show();
+
     return app->exec();
-};
+}
 
 // Constructor (with arguments of main)
 MainProg::MainProg(int argc, char **argv)
@@ -50,7 +59,7 @@ MainProg::MainProg(int argc, char **argv)
     mainFunction();
 
 }
-*/
+
 // Default constructor (no argument)
 /*MainProg::MainProg() {
 

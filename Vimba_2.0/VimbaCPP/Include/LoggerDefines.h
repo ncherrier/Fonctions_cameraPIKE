@@ -29,11 +29,11 @@
 #ifndef AVT_VMBAPI_LOGGERDEFINES_H
 #define AVT_VMBAPI_LOGGERDEFINES_H
 
-#include <VimbaCPP/Include/UserLoggerDefines.h>
+#include <Vimba_2.0/VimbaCPP/Include/UserLoggerDefines.h>
 
 #ifndef USER_LOGGER
 
-    #include <VimbaCPP/Include/FileLogger.h>
+    #include <Vimba_2.0/VimbaCPP/Include/FileLogger.h>
 
     namespace AVT {
     namespace VmbAPI {
@@ -52,7 +52,7 @@
     #include <VimbaCPP/Include/UserLoggerDefines.h>
 #endif
 
-#include <VimbaCPP/Include/VimbaSystem.h>
+#include <Vimba_2.0/VimbaCPP/Include/VimbaSystem.h>
 
 #define LOG_FREE_TEXT( txt )            std::string strExc( txt );\
                                         strExc.append( " in function: " );\

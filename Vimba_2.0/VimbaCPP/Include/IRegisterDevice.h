@@ -28,7 +28,7 @@
 #ifndef AVT_VMBAPI_IREGISTERDEVICE_H
 #define AVT_VMBAPI_IREGISTERDEVICE_H
 
-#include <VimbaC/Include/VmbCommonTypes.h>
+#include <Vimba_2.0/VimbaC/Include/VmbCommonTypes.h>
 #include <vector>
 
 namespace AVT {

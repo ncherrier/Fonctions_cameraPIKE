@@ -6,14 +6,33 @@
  * Acces au choix de dossier de destination.
  * */
 
-#include "SettingsWindow.h"
 #include <QApplication>
 #include <QPushButton>
 #include <iostream>
 #include <QGridLayout>
 #include "FramingWindow.h" // TODO: remove after tests
+#include "SettingsWindow.h"
+#include "ProcessWindow.h"
 
 using namespace std;
+
+// Slots and functions
+void SettingsWindow::goToProcessWindow() {
+    ProcessWindow *pro = new ProcessWindow;
+    pro->show();
+    this->close();
+}
+
+void SettingsWindow::goToFramingWindow() {
+    FramingWindow *fra = new FramingWindow;
+    fra->show();
+    this->close();
+}
+
+void SettingsWindow::startCycle() {
+    // TODO !!
+    goToProcessWindow();
+}
 
 // Constructors and destructors
 
@@ -23,7 +42,7 @@ SettingsWindow::SettingsWindow() {
     // Set size
 
     setFixedSize(800,400);
-
+    setWindowTitle("Mise au point et réglages");
 
     // Buttons
 
@@ -42,7 +61,8 @@ SettingsWindow::SettingsWindow() {
 
 
     // Add signals and slots (interactions with user)
-
+    QObject::connect(finishButton, SIGNAL(clicked()), this, SLOT(startCycle()));
+    QObject::connect(previousButton, SIGNAL(clicked()), this, SLOT(goToFramingWindow()));
 
 
     // Layout

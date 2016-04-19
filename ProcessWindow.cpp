@@ -2,4 +2,5 @@
 
 ProcessWindow::ProcessWindow()
 {
+    setWindowTitle("In process...");
 }

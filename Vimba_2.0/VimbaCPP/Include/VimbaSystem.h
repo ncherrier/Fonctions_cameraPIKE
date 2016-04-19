@@ -30,15 +30,15 @@
 
 #include <vector>
 
-#include <VimbaC/Include/VimbaC.h>
-#include <VimbaCPP/Include/VimbaCPPCommon.h>
-#include <VimbaCPP/Include/LoggerDefines.h>
-#include <VimbaCPP/Include/SharedPointerDefines.h>
-#include <VimbaCPP/Include/Interface.h>
-#include <VimbaCPP/Include/Camera.h>
-#include <VimbaCPP/Include/ICameraFactory.h>
-#include <VimbaCPP/Include/ICameraListObserver.h>
-#include <VimbaCPP/Include/IInterfaceListObserver.h>
+#include <Vimba_2.0/VimbaC/Include/VimbaC.h>
+#include <Vimba_2.0/VimbaCPP/Include/VimbaCPPCommon.h>
+#include <Vimba_2.0/VimbaCPP/Include/LoggerDefines.h>
+#include <Vimba_2.0/VimbaCPP/Include/SharedPointerDefines.h>
+#include <Vimba_2.0/VimbaCPP/Include/Interface.h>
+#include <Vimba_2.0/VimbaCPP/Include/Camera.h>
+#include <Vimba_2.0/VimbaCPP/Include/ICameraFactory.h>
+#include <Vimba_2.0/VimbaCPP/Include/ICameraListObserver.h>
+#include <Vimba_2.0/VimbaCPP/Include/IInterfaceListObserver.h>
 
 namespace AVT {
 namespace VmbAPI {
@@ -373,7 +373,7 @@ class VimbaSystem
     IMEXPORT VmbErrorType GetInterfaces( InterfacePtr *pInterfaces, VmbUint32_t &size );
 };
 
-#include <VimbaCPP/Include/VimbaSystem.hpp>
+#include <Vimba_2.0/VimbaCPP/Include/VimbaSystem.hpp>
 
 }} // namespace AVT::VmbAPI
 #endif

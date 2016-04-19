@@ -1,4 +1,4 @@
-/*#ifndef MAINPROG_H
+#ifndef MAINPROG_H
 #define MAINPROG_H
 
 #include <QApplication>
@@ -32,4 +32,4 @@ class MainProg : public QObject
 };
 
 #endif // MAINPROG_H
-*/
+

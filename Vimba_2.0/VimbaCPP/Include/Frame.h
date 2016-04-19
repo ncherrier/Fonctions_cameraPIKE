@@ -28,11 +28,11 @@
 #ifndef AVT_VMBAPI_FRAME_H
 #define AVT_VMBAPI_FRAME_H
 
-#include <VimbaC/Include/VimbaC.h>
-#include <VimbaCPP/Include/VimbaCPPCommon.h>
-#include <VimbaCPP/Include/SharedPointerDefines.h>
-#include <VimbaCPP/Include/IFrameObserver.h>
-#include <VimbaCPP/Include/AncillaryData.h>
+#include <Vimba_2.0/VimbaC/Include/VimbaC.h>
+#include <Vimba_2.0/VimbaCPP/Include/VimbaCPPCommon.h>
+#include <Vimba_2.0/VimbaCPP/Include/SharedPointerDefines.h>
+#include <Vimba_2.0/VimbaCPP/Include/IFrameObserver.h>
+#include <Vimba_2.0/VimbaCPP/Include/AncillaryData.h>
 #include <vector>
 
 namespace AVT {

@@ -6,7 +6,6 @@
 #include "SettingsWindow.h"
 #include <QApplication>
 #include <QPushButton>
-#include <iostream>
 #include <QGridLayout>
 #include <iostream> // TODO: remove after tests
 
@@ -14,11 +13,11 @@ using namespace std;
 
 // Slots
 
-void FramingWindow::openSettingsWindow() {
+void FramingWindow::goToSettingsWindow() {
     std::cout << "TODO: open next window" << std::endl;
     SettingsWindow *set = new SettingsWindow();
     set->show();
-    cout << "SettingsWindow shown" << endl;
+    this->close();
 }
 
 // Constructors and destructors
@@ -48,7 +47,7 @@ FramingWindow::FramingWindow() : QWidget()
     // Signals and slots
 
     QObject::connect(cancelButton, SIGNAL(clicked()), qApp, SLOT(quit()));
-    QObject::connect(nextButton, SIGNAL(clicked()), qApp, SLOT(openSettingsWindow()));
+    QObject::connect(nextButton, SIGNAL(clicked()), this, SLOT(goToSettingsWindow()));
 
 
 

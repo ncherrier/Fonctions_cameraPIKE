@@ -1,14 +1,10 @@
-/*
+
 #ifndef CAMERAPIKE_H
 #define CAMERAPIKE_H
 
 #include "Vimba_2.0/VimbaCPP/Include/VimbaCPP.h"
-#include "Vimba_2.0/VimbaCPP/Include/VimbaC.h"*/
+#include "Vimba_2.0/VimbaC/Include/VimbaC.h"
 
-
-
-
-/*
 class CameraPike : public AVT::VmbAPI::Camera
 {
     public:
@@ -48,8 +44,7 @@ class CameraPike : public AVT::VmbAPI::Camera
 
 };
 
-*/
-//#endif // CAMERAPIKE_H
+#endif // CAMERAPIKE_H
 
 
 

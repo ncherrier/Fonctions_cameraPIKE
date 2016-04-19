@@ -28,9 +28,9 @@
 #ifndef AVT_VMBAPI_IFEATUREOBSERVER_H
 #define AVT_VMBAPI_IFEATUREOBSERVER_H
 
-#include <VimbaCPP/Include/VimbaCPPCommon.h>
-#include <VimbaCPP/Include/SharedPointerDefines.h>
-#include <VimbaCPP/Include/Feature.h>
+#include <Vimba_2.0/VimbaCPP/Include/VimbaCPPCommon.h>
+#include <Vimba_2.0/VimbaCPP/Include/SharedPointerDefines.h>
+#include <Vimba_2.0/VimbaCPP/Include/Feature.h>
 #include <vector>
 
 namespace AVT {
