@@ -6,9 +6,9 @@
 #include "GraphicalUserInterface/SettingsWindow.h"
 #include "GraphicalUserInterface/FramingWindow.h"
 #include "GraphicalUserInterface/ProcessWindow.h"
+#include "SerialCommunication.h"
 #include "MainProg.h"
 #include "TakePictureTest.h" // for tests only
-
 
 using namespace std;
 
@@ -18,12 +18,9 @@ using namespace std;
 // take subpictures and communcate with Electronics to move the Industrial Camera
 // returns true if the process was executed normally
 bool MainProg::startCycle() {
-    // for tests:
-    cout << "hello! in MainProg::startCycle()" << endl;
 
-
-
-    return true;
+    return SerialCommunication::startCycle();
+    // TODO: change return so that one can know whether everything went good or not (or use exceptions ?)
 }
 
 // main programm
@@ -37,7 +34,7 @@ int MainProg::mainFunction(){
     //************************************************
 
 
-    //First window showed: FramingWindow
+    // First window showed: FramingWindow
     FramingWindow *fra = new FramingWindow();
     fra->show();
     cout << "FramingWindow shown" << endl;

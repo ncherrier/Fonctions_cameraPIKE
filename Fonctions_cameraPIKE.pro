@@ -14,6 +14,7 @@ SOURCES += \
     GraphicalUserInterface/ProcessWindow.cpp \
     MainProg.cpp \
     TakePictureTest.cpp \
+    SerialCommunication.cpp
 
 HEADERS += \
     IndustrialCamera/camera.h \
@@ -23,6 +24,7 @@ HEADERS += \
     GraphicalUserInterface/cameraSettingsWindow.h \
     GraphicalUserInterface/ProcessWindow.h \
     MainProg.h \
+    SerialCommunication.h \
     TakePictureTest.h \
     Vimba_2.0/VimbaCPP/Include/AncillaryData.h \
     Vimba_2.0/VimbaCPP/Include/BasicLockable.h \

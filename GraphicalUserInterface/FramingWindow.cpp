@@ -14,7 +14,6 @@ using namespace std;
 // Slots
 
 void FramingWindow::goToSettingsWindow() {
-    std::cout << "TODO: open next window" << std::endl;
     SettingsWindow *set = new SettingsWindow();
     set->show();
     this->close();
