@@ -24,7 +24,16 @@ class SettingsWindow : public QWidget
 
     public slots:
         void goToFramingWindow();
+        void openCameraSettings(); // open CameraSettingsWindow (settings for the industrial camera)
+
         void startCycle(); // to take the global picture
+
+        // give instructions to move camera
+
+        bool goUp();
+        bool goDown();
+        bool goLeft();
+        bool goRight();
 
     private:
         QPushButton *upButton;

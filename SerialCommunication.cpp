@@ -21,20 +21,31 @@ bool SerialCommunication::sendCharacter(char c){
 // Higher-level functions
 // Try several times ? a reflechir
 
-bool SerialCommunication::startCycle(){
-    cout << "calling SerialCommunication::startCycle()" << endl;
-    return sendCharacter('a');
+bool SerialCommunication::emergencyStop() {
+    cout << "calling SerialCommunication::emergencyStop()" << endl;
+    return sendCharacter('s');
 }
 
+// Move camera
 
-bool SerialCommunication::takePictureNow() {
-    cout << "calling SerialCommunication::takePictureNow()" << endl;
-    return sendCharacter('p');
+bool SerialCommunication::goUp(){
+    cout << "calling SerialCommunication::goUp()" << endl;
+    return sendCharacter('u'); // voir avec l'elec
 }
 
-bool SerialCommunication::pictureTaken() {
-    cout << "calling SerialCommunication::pictureTaken()" << endl;
-    return sendCharacter('o'); // "OK"
+bool SerialCommunication::goDown(){
+    cout << "calling SerialCommunication::goDown()" << endl;
+    return sendCharacter('d'); // voir avec l'elec
+}
+
+bool SerialCommunication::goLeft(){
+    cout << "calling SerialCommunication::goLeft()" << endl;
+    return sendCharacter('l'); // voir avec l'elec
+}
+
+bool SerialCommunication::goRight(){
+    cout << "calling SerialCommunication::goRight()" << endl;
+    return sendCharacter('r'); // voir avec l'elec
 }
 
 bool SerialCommunication::goTo(int x, int y){
@@ -43,7 +54,15 @@ bool SerialCommunication::goTo(int x, int y){
     // TODO: verifier protocole de communication avec elec
 }
 
-bool SerialCommunication::emergencyStop() {
-    cout << "calling SerialCommunication::emergencyStop()" << endl;
-    return sendCharacter('s');
+bool SerialCommunication::startCycle(){
+    cout << "calling SerialCommunication::startCycle()" << endl;
+    return sendCharacter('a');
 }
+
+bool SerialCommunication::pictureTaken() {
+    cout << "calling SerialCommunication::pictureTaken()" << endl;
+    return sendCharacter('o'); // "OK"
+}
+
+
+
