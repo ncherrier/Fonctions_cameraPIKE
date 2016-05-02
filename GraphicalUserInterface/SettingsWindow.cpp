@@ -66,6 +66,10 @@ bool SettingsWindow::goRight() {
 // Default Constructor
 SettingsWindow::SettingsWindow() {
 
+    // provisory
+    cout << "TODO: inclure flux video webcam et camera" << endl;
+    cout << "Webcam settings: inutile ?" << endl;
+
     // Set size
 
     setFixedSize(800,400);

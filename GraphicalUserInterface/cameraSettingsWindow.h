@@ -16,7 +16,7 @@ class CameraSettingsWindow : public QDialog
 
     public:
         //CameraSettingsWindow();
-        CameraSettingsWindow(QWidget*);
+        CameraSettingsWindow(QWidget*); // arg = parent widget
 
     public slots:
         void reset();
@@ -25,11 +25,16 @@ class CameraSettingsWindow : public QDialog
         void validate();
 
     private:
+        // Basics
         QPushButton* resetButton;
         QPushButton* applyButton;
         QPushButton* cancelButton;
         QPushButton* validateButton;
 
+        // Settings
+        // TODO:
+        // pixelColorFilter // variables possibles : BayerRG BayerGB BayerGR BayerBG
+        // exposureTime
 };
 
 #endif // CAMERASETTINGSWINDOW_H
