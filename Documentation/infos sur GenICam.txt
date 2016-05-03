@@ -1,0 +1,50 @@
+Generic Interface for Cameras
+generic programming interface for industrial cameras
+
+developped by European Machine Vision Association (EMVA)
+Allied Vision is a member of EMVA
+Apparently Allied Vision cameras are compatible with GenICam
+
+Contents of GenICam TM Standard Version (3.0):
+-GenApi 3.0
+-GenTL 1.5
+-SFNC 2.2
+-GenTL SFNC 1.0
+-GenCP 1.1
+-CLProtocol 1.1
+
+Download separately (see link below)
+
+Useful modules:
+-GenApi (reference implementation v. 3.0)
+	(unzip, choose adequate OS and then "SDK" (not "Runtime"), unzip)
+-PDF Documentation: 
+	-SFNC (Standard Features Naming Convention)
+		see p. 135: 5 Acquisition control
+	-PFNC (Pixel Format Naming Convention)
+	-etc.
+-others?
+
+
+USEFUL LINKS:
+
+www.emva.org/standards-technology/genicam/
+www.emva.org/standards-technology/genicam/genicam-downloads
+www.emva.org/standards-technology/genicam/genicam-group-members
+
+https://de.wikipedia.org/wiki/GenICam
+https://en.wikipedia.org/wiki/GenICam
+
+******************************************************
+Tip to build code using qtcreator:
+Open console;
+
+cd my_prog_repository
+qmake -project // generate .pro with all headers & sources
+// plus if you want:
+qmake
+make
+// generates executable file
+
+
+
