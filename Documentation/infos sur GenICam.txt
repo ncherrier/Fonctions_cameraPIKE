@@ -20,7 +20,9 @@ Useful modules:
 	(unzip, choose adequate OS and then "SDK" (not "Runtime"), unzip)
 -PDF Documentation: 
 	-SFNC (Standard Features Naming Convention)
-		see p. 135: 5 Acquisition control
+		see p. 135: 5 Acquisition control. 
+		in particular: tells in which Interfaces you can find important functions (ex: AcquisitionStart in ICommand)
+SOME FUNCTIONS SEEM TO BE MISSING. TO BE WRITTEN BY USER??
 	-PFNC (Pixel Format Naming Convention)
 	-etc.
 -others?
