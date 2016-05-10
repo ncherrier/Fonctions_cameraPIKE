@@ -9,7 +9,7 @@
 #include "SerialCommunication.h"
 #include "MainProg.h"
 #include "TakePictureTest.h" // for tests only
-
+/*
 using namespace std;
 
 
@@ -81,3 +81,4 @@ int main(int argc, char *argv[])
 }
 
 
+*/

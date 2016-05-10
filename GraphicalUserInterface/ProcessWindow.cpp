@@ -7,7 +7,7 @@
 using namespace std;
 
 // Slots
-
+/*
 void ProcessWindow::emergencyStop() {
 
     std::cout << "calling ProcessWindow::emergencyStop();" << std::endl;
@@ -39,3 +39,4 @@ ProcessWindow::ProcessWindow()
 }
 
 
+*/

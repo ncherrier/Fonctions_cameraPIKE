@@ -16,7 +16,7 @@
 #include "MainProg.h"
 
 using namespace std;
-
+/*
 // Slots and functions
 void SettingsWindow::goToProcessWindow() {
     ProcessWindow *pro = new ProcessWindow;
@@ -87,3 +87,4 @@ SettingsWindow::SettingsWindow() {
 
 
 
+*/

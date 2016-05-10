@@ -8,7 +8,7 @@
 #include <QPushButton>
 #include <QGridLayout>
 #include <iostream> // TODO: remove after tests
-
+/*
 using namespace std;
 
 // Slots
@@ -66,3 +66,4 @@ FramingWindow::FramingWindow() : QWidget()
 FramingWindow::~FramingWindow(){
     // what TODO ??
 }
+*/
