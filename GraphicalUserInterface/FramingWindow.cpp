@@ -24,6 +24,11 @@ void FramingWindow::goToSettingsWindow() {
 // Default Constructor
 FramingWindow::FramingWindow() : QWidget()
 {
+
+    // provisory
+    cout << "TODO: inclure le flux video de la webcam" << endl;
+    cout << "Webcam settings: inutile ?" << endl;
+
     // Set size and title
 
     setFixedSize(800,400);

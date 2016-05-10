@@ -14,6 +14,7 @@
 #include "GraphicalUserInterface/SettingsWindow.h"
 #include "GraphicalUserInterface/ProcessWindow.h"
 #include "MainProg.h"
+#include "SerialCommunication.h"
 
 using namespace std;
 /*
@@ -30,16 +31,44 @@ void SettingsWindow::goToFramingWindow() {
     this->close();
 }
 
+void SettingsWindow::openCameraSettings() {
+    CameraSettingsWindow *cam = new CameraSettingsWindow(this);
+    cam->exec();
+}
+
 void SettingsWindow::startCycle() {
     // TODO !!
     goToProcessWindow();
     MainProg::startCycle();
 }
 
+// give instructions to move camera
+
+bool SettingsWindow::goUp() {
+    return SerialCommunication::goUp();
+}
+
+bool SettingsWindow::goDown() {
+    return SerialCommunication::goDown();
+}
+
+bool SettingsWindow::goLeft() {
+    return SerialCommunication::goLeft();
+}
+
+bool SettingsWindow::goRight() {
+    return SerialCommunication::goRight();
+}
+
+
 // Constructors and destructors
 
 // Default Constructor
 SettingsWindow::SettingsWindow() {
+
+    // provisory
+    cout << "TODO: inclure flux video webcam et camera" << endl;
+    cout << "Webcam settings: inutile ?" << endl;
 
     // Set size
 
@@ -65,6 +94,11 @@ SettingsWindow::SettingsWindow() {
     // Add signals and slots (interactions with user)
     QObject::connect(finishButton, SIGNAL(clicked()), this, SLOT(startCycle()));
     QObject::connect(previousButton, SIGNAL(clicked()), this, SLOT(goToFramingWindow()));
+    QObject::connect(cameraSettingsButton, SIGNAL(clicked()), this, SLOT(openCameraSettings()));
+    QObject::connect(upButton, SIGNAL(clicked()), this, SLOT(goUp()));
+    QObject::connect(downButton, SIGNAL(clicked()), this, SLOT(goDown()));
+    QObject::connect(leftButton, SIGNAL(clicked()), this, SLOT(goLeft()));
+    QObject::connect(rightButton, SIGNAL(clicked()), this, SLOT(goRight()));
 
 
     // Layout

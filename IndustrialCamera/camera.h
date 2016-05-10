@@ -43,8 +43,8 @@ class CameraPike : public AVT::VmbAPI::Camera
 
 
 
-};*/
-
+};
+*/
 #endif // CAMERAPIKE_H
 
 
