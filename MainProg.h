@@ -3,7 +3,6 @@
 
 #include <QApplication>
 #include "GraphicalUserInterface/cameraSettingsWindow.h"
-#include "GraphicalUserInterface/webcamSettingsWindow.h"
 #include "GraphicalUserInterface/FramingWindow.h"
 #include "GraphicalUserInterface/SettingsWindow.h"
 #include "GraphicalUserInterface/ProcessWindow.h"

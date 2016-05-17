@@ -5,6 +5,7 @@
 #include <QApplication>
 #include <QDialog>
 #include <QPushButton>
+#include <QSpinBox>
 
 class CameraSettingsWindow : public QDialog
 // interet d'heriter de QDialog :
@@ -32,9 +33,12 @@ class CameraSettingsWindow : public QDialog
         QPushButton* validateButton;
 
         // Settings
+        // exposureTime
+        QSpinBox* exposureTimeBox;
+
         // TODO:
         // pixelColorFilter // variables possibles : BayerRG BayerGB BayerGR BayerBG
-        // exposureTime
+
 };
 
 #endif // CAMERASETTINGSWINDOW_H

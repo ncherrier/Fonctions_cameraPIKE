@@ -12,6 +12,8 @@ void CameraSettingsWindow::reset(){
 
 void CameraSettingsWindow::apply() {
     std::cout << "calling slot CameraSettingsWindow::apply()" << std::endl;
+    // calculate value set by user
+    double time = 1/(exposureTimeBox->value());
     // TODO (store settings and communicate with camera !!)
 }
 
@@ -37,6 +39,14 @@ CameraSettingsWindow::CameraSettingsWindow(QWidget *parent):QDialog(parent) {
     cancelButton = new QPushButton("Cancel");
     validateButton = new QPushButton("OK");
 
+    exposureTimeBox = new QSpinBox();
+    exposureTimeBox->setMinimum(1);
+    exposureTimeBox->setMaximum(400);
+    exposureTimeBox->setSingleStep(1);
+    exposureTimeBox->setAccelerated(true);
+    exposureTimeBox->setPrefix("1/");
+    exposureTimeBox->setSuffix(" s");
+
     QObject::connect(resetButton, SIGNAL(clicked()), this, SLOT(reset()));
     QObject::connect(applyButton, SIGNAL(clicked()), this, SLOT(apply()));
     QObject::connect(cancelButton, SIGNAL(clicked()), this, SLOT(close())); // suffit ? a verifier
@@ -46,6 +56,7 @@ CameraSettingsWindow::CameraSettingsWindow(QWidget *parent):QDialog(parent) {
 
     QGridLayout *layout = new QGridLayout;
 
+    layout->addWidget(exposureTimeBox);
     layout->addWidget(resetButton);
     layout->addWidget(applyButton);
     layout->addWidget(cancelButton);

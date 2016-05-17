@@ -2,14 +2,13 @@
 #include <QPushButton>
 #include <iostream>
 #include "GraphicalUserInterface/cameraSettingsWindow.h"
-#include "GraphicalUserInterface/webcamSettingsWindow.h"
 #include "GraphicalUserInterface/SettingsWindow.h"
 #include "GraphicalUserInterface/FramingWindow.h"
 #include "GraphicalUserInterface/ProcessWindow.h"
 #include "SerialCommunication.h"
 #include "MainProg.h"
 #include "TakePictureTest.h" // for tests only
-/*
+
 using namespace std;
 
 
@@ -19,8 +18,10 @@ using namespace std;
 // returns true if the process was executed normally
 bool MainProg::startCycle() {
 
-    return SerialCommunication::startCycle();
+
     // TODO: change return so that one can know whether everything went good or not (or use exceptions ?)
+
+    return;
 }
 
 // main programm
@@ -81,4 +82,3 @@ int main(int argc, char *argv[])
 }
 
 
-*/
