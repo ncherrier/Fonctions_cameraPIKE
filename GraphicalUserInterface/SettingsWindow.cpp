@@ -68,7 +68,6 @@ SettingsWindow::SettingsWindow() {
 
     // provisory
     cout << "TODO: inclure flux video webcam et camera" << endl;
-    cout << "Webcam settings: inutile ?" << endl;
 
     // Set size
 
@@ -86,7 +85,6 @@ SettingsWindow::SettingsWindow() {
     previousButton = new QPushButton("< Previous");
 
     cameraSettingsButton = new QPushButton("Indus. camera settings");
-    webcamSettingsButton = new QPushButton("Webcam settings");
 
     //QPushButton RegisterSettingsButton("Register settings"); // To open a window to choose the repository to save photos. Useful ??
 
@@ -112,7 +110,6 @@ SettingsWindow::SettingsWindow() {
     layout->addWidget(finishButton);
     layout->addWidget(previousButton);
     layout->addWidget(cameraSettingsButton);
-    layout->addWidget(webcamSettingsButton);
 
     setLayout(layout);
 
@@ -121,4 +118,3 @@ SettingsWindow::SettingsWindow() {
 
 
 
-*/

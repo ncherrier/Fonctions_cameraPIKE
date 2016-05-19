@@ -27,7 +27,17 @@ FramingWindow::FramingWindow() : QWidget()
 
     // provisory
     cout << "TODO: inclure le flux video de la webcam" << endl;
-    cout << "Webcam settings: inutile ?" << endl;
+
+    // Detect webcam
+    QList<QCameraInfo> cameras = QCameraInfo::availableCameras();
+    QCameraInfo const firstCam = cameras[0];
+    QCamera camera(firstCam);
+
+    // Flux video...
+    QVideoWidget videoWidget;
+    videoWidget.resize(800,480); // video size
+    camera.setViewfinder(&videoWidget); //Intègre la vidéo au videoWidget
+    camera.start();
 
     // Set size and title
 
@@ -37,7 +47,6 @@ FramingWindow::FramingWindow() : QWidget()
 
     // Buttons
 
-    webcamSettingsButton = new QPushButton("Webcam settings");
     nextButton = new QPushButton("Next >");
     cancelButton = new QPushButton("Cancel");
 
@@ -59,16 +68,14 @@ FramingWindow::FramingWindow() : QWidget()
 
     QGridLayout *layout = new QGridLayout;
 
-    layout->addWidget(webcamSettingsButton,2,2);
-    layout->addWidget(nextButton,3,1);
-    layout->addWidget(cancelButton,3,2);
+    layout->addWidget(&videoWidget, 1, 1);
+    layout->addWidget(cancelButton, 2, 1);
+    layout->addWidget(nextButton, 2, 2);
 
     setLayout(layout);
-
 }
 
 // Default destructor
 FramingWindow::~FramingWindow(){
     // what TODO ??
 }
-*/

@@ -40,5 +40,3 @@ ProcessWindow::ProcessWindow()
     setLayout(layout);
 }
 
-
-*/

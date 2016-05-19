@@ -5,6 +5,9 @@
 #include <QPushButton>
 #include <QWidget>
 #include <QApplication>
+#include <QtMultimedia>
+#include <QtMultimediaWidgets>
+#include <QVideoWidget>
 
 class FramingWindow : public QWidget
 {
@@ -20,7 +23,10 @@ class FramingWindow : public QWidget
         void goToSettingsWindow();
 
     private:
-        QPushButton *webcamSettingsButton;
+        // video
+        // QWidget *videoContainer;
+        // QVideoWidget *videoWidget;
+        // buttons
         QPushButton *nextButton;
         QPushButton *cancelButton;
 

@@ -4,7 +4,6 @@
 //#include <QPushButton>
 #include <iostream>
 #include "GraphicalUserInterface/cameraSettingsWindow.h"
-#include "GraphicalUserInterface/webcamSettingsWindow.h"
 #include "GraphicalUserInterface/SettingsWindow.h"
 #include "GraphicalUserInterface/FramingWindow.h"
 #include "GraphicalUserInterface/ProcessWindow.h"
@@ -22,8 +21,10 @@ using namespace std;
 
 bool MainProg::startCycle() {
 
-    return SerialCommunication::startCycle();
+
     // TODO: change return so that one can know whether everything went good or not (or use exceptions ?)
+
+    return;
 }
 
 // main programm
@@ -85,16 +86,3 @@ int main(int argc, char *argv[])
 
 
 */
-
-#include <QtWidgets/QApplication>
-#include <iostream>
-using namespace std;
-int main(int argc, char *argv[])
-{
-	
-	cout << "hello! in main" << endl;
-	QApplication a(argc, argv);
-	return a.exec();
-}
-
-

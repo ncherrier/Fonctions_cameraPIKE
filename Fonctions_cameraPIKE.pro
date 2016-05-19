@@ -2,7 +2,9 @@ QT += core gui
 
 QT += widgets # Indispensable pour interface graphique !!!
 
+QT += serialport
 
+QT += quick qml multimedia multimediawidgets # for the webcam
 
 SOURCES += \
     IndustrialCamera/camera.cpp \
@@ -10,7 +12,6 @@ SOURCES += \
     GraphicalUserInterface/FramingWindow.cpp \
     GraphicalUserInterface/SettingsWindow.cpp \
     GraphicalUserInterface/cameraSettingsWindow.cpp \
-    GraphicalUserInterface/webcamSettingsWindow.cpp \
     GraphicalUserInterface/ProcessWindow.cpp \
     MainProg.cpp \
     TakePictureTest.cpp \
@@ -20,7 +21,6 @@ HEADERS += \
     IndustrialCamera/camera.h \
     GraphicalUserInterface/FramingWindow.h \
     GraphicalUserInterface/SettingsWindow.h \
-    GraphicalUserInterface/webcamSettingsWindow.h \
     GraphicalUserInterface/cameraSettingsWindow.h \
     GraphicalUserInterface/ProcessWindow.h \
     MainProg.h \

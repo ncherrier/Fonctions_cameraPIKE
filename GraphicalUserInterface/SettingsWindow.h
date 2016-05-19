@@ -13,7 +13,6 @@
 #include <QPushButton>
 #include <QWidget>
 
-
 class SettingsWindow : public QWidget
 {
     Q_OBJECT
@@ -43,7 +42,6 @@ class SettingsWindow : public QWidget
         QPushButton *finishButton;
         QPushButton *previousButton;
         QPushButton *cameraSettingsButton;
-        QPushButton *webcamSettingsButton;
 
         void goToProcessWindow();
 
