@@ -1,3 +1,5 @@
+/*
+
 #include "GraphicalUserInterface/ProcessWindow.h"
 #include "GraphicalUserInterface/SettingsWindow.h"
 #include "SerialCommunication.h"
@@ -7,7 +9,7 @@
 using namespace std;
 
 // Slots
-/*
+
 void ProcessWindow::emergencyStop() {
 
     std::cout << "calling ProcessWindow::emergencyStop();" << std::endl;

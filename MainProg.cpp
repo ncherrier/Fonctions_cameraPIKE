@@ -1,5 +1,7 @@
-#include <QApplication>
-#include <QPushButton>
+/*
+
+#include <QtWidgets/QApplication>
+//#include <QPushButton>
 #include <iostream>
 #include "GraphicalUserInterface/cameraSettingsWindow.h"
 #include "GraphicalUserInterface/webcamSettingsWindow.h"
@@ -9,7 +11,7 @@
 #include "SerialCommunication.h"
 #include "MainProg.h"
 #include "TakePictureTest.h" // for tests only
-/*
+
 using namespace std;
 
 
@@ -17,6 +19,7 @@ using namespace std;
 // will be called by the User Interface
 // take subpictures and communcate with Electronics to move the Industrial Camera
 // returns true if the process was executed normally
+
 bool MainProg::startCycle() {
 
     return SerialCommunication::startCycle();
@@ -29,15 +32,15 @@ int MainProg::mainFunction(){
     //*****************For tests only*****************
     cout << "hello! in MainProg::MainFunction" << endl;
 
-    //TakePictureTest *tak = new TakePictureTest();
-    //tak->show();
+    TakePictureTest *tak = new TakePictureTest();
+    tak->show();
     //************************************************
 
 
     // First window showed: FramingWindow
-    FramingWindow *fra = new FramingWindow();
-    fra->show();
-    cout << "FramingWindow shown" << endl;
+    //FramingWindow *fra = new FramingWindow();
+    //fra->show();
+    //cout << "FramingWindow shown" << endl;
 
 
     return app->exec();
@@ -82,3 +85,16 @@ int main(int argc, char *argv[])
 
 
 */
+
+#include <QtWidgets/QApplication>
+#include <iostream>
+using namespace std;
+int main(int argc, char *argv[])
+{
+	
+	cout << "hello! in main" << endl;
+	QApplication a(argc, argv);
+	return a.exec();
+}
+
+

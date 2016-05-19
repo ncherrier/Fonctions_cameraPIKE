@@ -1,3 +1,4 @@
+/*
 #ifndef WEBCAMSETTINGSWINDOW_H
 #define WEBCAMSETTINGSWINDOW_H
 
@@ -11,3 +12,4 @@ public:
 };
 
 #endif // WEBCAMSETTINGSWINDOW_H
+*/

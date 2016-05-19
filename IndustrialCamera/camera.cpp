@@ -6,14 +6,14 @@
 #include <iostream>
 
 using namespace std;
-
 /*
+
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
     cout<<"123"<<endl;
-
+	
     AVT::VmbAPI::CameraPtrVector cameras;
 
     VmbUint32_t test = 4;
@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
     cam->AcquireSingleImage(frame,test);
 
     AVT::VmbAPI::VimbaSystem &system = AVT::VmbAPI::VimbaSystem::GetInstance();
-
+	
     return a.exec();
 }
 

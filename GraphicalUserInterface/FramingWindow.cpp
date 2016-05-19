@@ -1,14 +1,14 @@
 /* Fenetre pour le cadrage
  * (affiche le signal de la webcam ;
  * accès aux reglages de la webcam (?)) */
-
+/*
 #include "GraphicalUserInterface/FramingWindow.h"
 #include "GraphicalUserInterface/SettingsWindow.h"
 #include <QApplication>
 #include <QPushButton>
 #include <QGridLayout>
 #include <iostream> // TODO: remove after tests
-/*
+
 using namespace std;
 
 // Slots

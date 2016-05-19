@@ -1,7 +1,8 @@
+/*
 #ifndef MAINPROG_H
 #define MAINPROG_H
 
-#include <QApplication>
+#include <QtWidgets/QApplication>
 #include "GraphicalUserInterface/cameraSettingsWindow.h"
 #include "GraphicalUserInterface/webcamSettingsWindow.h"
 #include "GraphicalUserInterface/FramingWindow.h"
@@ -20,7 +21,7 @@ class MainProg : public QObject
         virtual ~MainProg(); // Default destructor
 
         // To take a global picture
-        static bool startCycle();
+        //static bool startCycle();
         // will be called by the User Interface
         // returns true if the process was executed normally
 
@@ -30,4 +31,8 @@ class MainProg : public QObject
 };
 
 #endif // MAINPROG_H
+
+*/
+
+
 
