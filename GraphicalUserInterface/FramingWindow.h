@@ -10,24 +10,24 @@
 
 class FramingWindow : public QWidget
 {
-    Q_OBJECT // To be able to define new slots (interactions with user)
+    //Q_OBJECT // To be able to define new slots (interactions with user)
     // /!\ Build -> run QMAKE before building and running
 
     public:
         FramingWindow();
-        virtual ~FramingWindow();
+        //virtual ~FramingWindow();
         // No destructor needed (?)
 
-    public slots:
-        void goToSettingsWindow();
+    //public slots:
+       // void goToSettingsWindow();
 
     private:
         // video
         // QWidget *videoContainer;
         // QVideoWidget *videoWidget;
         // buttons
-        QPushButton *nextButton;
-        QPushButton *cancelButton;
+        // QPushButton *nextButton;
+        // QPushButton *cancelButton;
 
 };
 

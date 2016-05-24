@@ -1,3 +1,5 @@
+TARGET=declarative-camera
+
 QT += core gui
 
 QT += widgets # Indispensable pour interface graphique !!!
@@ -78,3 +80,10 @@ win32:!win32-g++:CONFIG(release, debug|release): PRE_TARGETDEPS += $$PWD/Vimba_2
 
 INCLUDEPATH += $$PWD/Vimba_2.0
 DEPENDPATH += $$PWD/Vimba_2.0
+
+target.path = $$[QT_INSTALL_EXAMPLES]/multimedia/declarative-camera
+INSTALLS += target
+
+winrt {
+    WINRT_MANIFEST.capabilities_device += webcam microphone
+}

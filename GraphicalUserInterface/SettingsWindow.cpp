@@ -15,6 +15,7 @@
 #include "GraphicalUserInterface/ProcessWindow.h"
 #include "MainProg.h"
 #include "SerialCommunication.h"
+#include "cameraSettingsWindow.h"
 
 using namespace std;
 
@@ -39,7 +40,7 @@ void SettingsWindow::openCameraSettings() {
 void SettingsWindow::startCycle() {
     // TODO !!
     goToProcessWindow();
-    MainProg::startCycle();
+    startCycle();
 }
 
 // give instructions to move camera
