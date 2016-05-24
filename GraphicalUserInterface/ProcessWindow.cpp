@@ -1,4 +1,4 @@
-/*
+
 
 #include "GraphicalUserInterface/ProcessWindow.h"
 #include "GraphicalUserInterface/SettingsWindow.h"

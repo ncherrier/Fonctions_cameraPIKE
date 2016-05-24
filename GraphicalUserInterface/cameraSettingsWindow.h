@@ -1,4 +1,4 @@
-/*
+
 #ifndef CAMERASETTINGSWINDOW_H
 #define CAMERASETTINGSWINDOW_H
 
@@ -45,4 +45,3 @@ class CameraSettingsWindow : public QDialog
 #endif // CAMERASETTINGSWINDOW_H
 
 
-*/

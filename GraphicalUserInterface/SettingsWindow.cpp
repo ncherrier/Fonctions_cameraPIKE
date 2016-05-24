@@ -5,7 +5,7 @@
  * Acces aux reglages de la camera indus. (et de la webcam ?),
  * Acces au choix de dossier de destination.
  * */
-/*
+
 #include <QApplication>
 #include <QPushButton>
 #include <iostream>
@@ -15,6 +15,7 @@
 #include "GraphicalUserInterface/ProcessWindow.h"
 #include "MainProg.h"
 #include "SerialCommunication.h"
+#include "cameraSettingsWindow.h"
 
 using namespace std;
 
@@ -39,7 +40,7 @@ void SettingsWindow::openCameraSettings() {
 void SettingsWindow::startCycle() {
     // TODO !!
     goToProcessWindow();
-    MainProg::startCycle();
+    startCycle();
 }
 
 // give instructions to move camera

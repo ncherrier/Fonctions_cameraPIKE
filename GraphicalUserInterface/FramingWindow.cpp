@@ -1,7 +1,7 @@
 /* Fenetre pour le cadrage
  * (affiche le signal de la webcam ;
  * accès aux reglages de la webcam (?)) */
-/*
+
 #include "GraphicalUserInterface/FramingWindow.h"
 #include "GraphicalUserInterface/SettingsWindow.h"
 #include <QApplication>
@@ -13,11 +13,13 @@ using namespace std;
 
 // Slots
 
-void FramingWindow::goToSettingsWindow() {
-    SettingsWindow *set = new SettingsWindow();
-    set->show();
-    this->close();
-}
+/*void FramingWindow::goToSettingsWindow() {
+    // SettingsWindow *set = new SettingsWindow();
+    // set->show();
+    // this->close();
+    // ****** TEST!!! ******
+
+}*/
 
 // Constructors and destructors
 
@@ -34,21 +36,26 @@ FramingWindow::FramingWindow() : QWidget()
     QCamera camera(firstCam);
 
     // Flux video...
-    QVideoWidget videoWidget;
+    QWidget videoContainer(this);
+    // setCentralWidget(&videoContainer);
+    QVideoWidget videoWidget(&videoContainer);
     videoWidget.resize(800,480); // video size
     camera.setViewfinder(&videoWidget); //Intègre la vidéo au videoWidget
     camera.start();
+    // provisory
+    cout << "camera started" << endl;
+
 
     // Set size and title
 
-    setFixedSize(800,400);
+    setFixedSize(800,480);
     setWindowTitle("Framing");
 
 
     // Buttons
 
-    nextButton = new QPushButton("Next >");
-    cancelButton = new QPushButton("Cancel");
+    //nextButton = new QPushButton("Next >");
+    //cancelButton = new QPushButton("Cancel");
 
 
     // Tips
@@ -59,24 +66,23 @@ FramingWindow::FramingWindow() : QWidget()
 
     // Signals and slots
 
-    QObject::connect(cancelButton, SIGNAL(clicked()), qApp, SLOT(quit()));
-    QObject::connect(nextButton, SIGNAL(clicked()), this, SLOT(goToSettingsWindow()));
+    // QObject::connect(cancelButton, SIGNAL(clicked()), qApp, SLOT(quit()));
+    // QObject::connect(nextButton, SIGNAL(clicked()), this, SLOT(goToSettingsWindow()));
 
 
 
     // Layout
 
-    QGridLayout *layout = new QGridLayout;
+    // QGridLayout *layout = new QGridLayout;
 
-    layout->addWidget(&videoWidget, 1, 1);
+    /*layout->addWidget(&videoWidget, 1, 1);
     layout->addWidget(cancelButton, 2, 1);
     layout->addWidget(nextButton, 2, 2);
 
-    setLayout(layout);
+    setLayout(layout);*/
 }
 
 // Default destructor
-FramingWindow::~FramingWindow(){
+//FramingWindow::~FramingWindow(){
     // what TODO ??
-}
-*/
+//}
