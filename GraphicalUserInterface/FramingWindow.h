@@ -1,3 +1,4 @@
+/*
 #ifndef FRAMINGWINDOW_H
 #define FRAMINGWINDOW_H
 
@@ -32,3 +33,4 @@ class FramingWindow : public QWidget
 };
 
 #endif // FRAMINGWINDOW_H
+*/

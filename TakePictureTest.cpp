@@ -1,7 +1,8 @@
+/*
 #include <iostream> // TODO: remove after tests
-#include <QApplication>
-#include <QPushButton>
-#include <QGridLayout>
+#include <QtWidgets/QApplication>
+//#include <QPushButton>
+//#include <QGridLayout>
 #include "TakePictureTest.h"
 
 using namespace std;
@@ -22,21 +23,22 @@ TakePictureTest::TakePictureTest()
 
     // Button
 
-    goButton = new QPushButton("Take picture");
+    //goButton = new QPushButton("Take picture");
 
     // Slots
 
-    QObject::connect(goButton, SIGNAL(clicked()), this, SLOT(takePicture()));
+    //QObject::connect(goButton, SIGNAL(clicked()), this, SLOT(takePicture()));
 
     // Layout
-
+	
     QGridLayout *layout = new QGridLayout;
     layout->addWidget(goButton,1,1);
     setLayout(layout);
-
+	
 }
 
 // Default destructor
 TakePictureTest::~TakePictureTest() {
     // What TODO ?
 }
+*/

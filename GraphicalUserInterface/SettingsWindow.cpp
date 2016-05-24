@@ -5,7 +5,7 @@
  * Acces aux reglages de la camera indus. (et de la webcam ?),
  * Acces au choix de dossier de destination.
  * */
-
+/*
 #include <QApplication>
 #include <QPushButton>
 #include <iostream>

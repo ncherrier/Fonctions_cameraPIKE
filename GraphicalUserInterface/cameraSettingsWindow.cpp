@@ -1,3 +1,4 @@
+/*
 #include "GraphicalUserInterface/cameraSettingsWindow.h"
 #include <QGridLayout>
 #include <iostream> // for tests only
@@ -69,3 +70,4 @@ CameraSettingsWindow::CameraSettingsWindow(QWidget *parent):QDialog(parent) {
     reset();
 
 }
+*/

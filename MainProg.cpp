@@ -1,6 +1,7 @@
 #include <QApplication>
 #include <QPushButton>
 #include <iostream> // for tests
+#include <QtWidgets/QApplication>
 #include "GraphicalUserInterface/cameraSettingsWindow.h"
 #include "GraphicalUserInterface/SettingsWindow.h"
 #include "GraphicalUserInterface/FramingWindow.h"
@@ -28,8 +29,6 @@ bool startCycle() {
 
     return true;
 }
-
-
 
     //*****************For tests only*****************
     //cout << "hello! in MainProg::MainFunction" << endl;
@@ -165,5 +164,6 @@ int main(int argc, char *argv[])
 
     return app->exec();
 }
+
 
 

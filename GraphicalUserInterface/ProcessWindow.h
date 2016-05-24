@@ -1,3 +1,4 @@
+/*
 #ifndef PROCESSWINDOW_H
 #define PROCESSWINDOW_H
 
@@ -22,3 +23,4 @@ class ProcessWindow : public QWidget
 };
 
 #endif // PROCESSWINDOW_H
+*/
