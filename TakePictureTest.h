@@ -1,7 +1,7 @@
 /* Provisory window to test the communication
  * with the industrial camera.
  * Can we take a picture ? */
-/*
+
 #ifndef TAKEPICTURETEST_H
 #define TAKEPICTURETEST_H
 
@@ -25,4 +25,3 @@ class TakePictureTest : public QWidget
 };
 
 #endif // TAKEPICTURETEST_H
-*/

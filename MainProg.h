@@ -6,7 +6,7 @@
 #include "GraphicalUserInterface/FramingWindow.h"
 #include "GraphicalUserInterface/SettingsWindow.h"
 #include "GraphicalUserInterface/ProcessWindow.h"
-
+/*
 class MainProg : public QObject
 {
 
@@ -26,6 +26,6 @@ class MainProg : public QObject
     private:
         int mainFunction();
 
-};
+};*/
 
 #endif // MAINPROG_H

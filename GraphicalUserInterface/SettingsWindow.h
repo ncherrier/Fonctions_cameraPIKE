@@ -5,7 +5,7 @@
  * Acces aux reglages de la camera indus. (et de la webcam ?),
  * Acces au choix de dossier de destination.
  * */
-/*
+
 #ifndef SETTINGSWINDOW_H
 #define SETTINGSWINDOW_H
 
@@ -48,4 +48,3 @@ class SettingsWindow : public QWidget
 };
 
 #endif // SETTINGSWINDOW_H
-*/

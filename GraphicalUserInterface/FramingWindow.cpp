@@ -1,7 +1,7 @@
 /* Fenetre pour le cadrage
  * (affiche le signal de la webcam ;
  * accès aux reglages de la webcam (?)) */
-/*
+
 #include "GraphicalUserInterface/FramingWindow.h"
 #include "GraphicalUserInterface/SettingsWindow.h"
 #include <QApplication>
