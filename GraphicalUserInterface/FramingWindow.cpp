@@ -79,3 +79,4 @@ FramingWindow::FramingWindow() : QWidget()
 FramingWindow::~FramingWindow(){
     // what TODO ??
 }
+*/
